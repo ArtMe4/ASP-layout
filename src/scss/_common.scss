@@ -1,0 +1,45 @@
+@include font-face('Gilroy', '../fonts/Gilroy-Regular');
+@include font-face('Gilroy', '../fonts/Gilroy-Medium', 500);
+@include font-face('Gilroy', '../fonts/Gilroy-Semibold', 600);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Gilroy', sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(#000, 0);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  text-align: left;
+  overflow-x: hidden;
+}
+
+a, a:hover {
+  text-decoration: unset;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: unset;
+  line-height: unset;
+  margin: unset;
+  padding: unset;
+}
+
+.sandbox {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}

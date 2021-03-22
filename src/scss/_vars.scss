@@ -1,0 +1,73 @@
+$white: #fff;
+$blue: #085F97;
+$dark-blue: #0A2555;
+$dark-gray: #3D4C68;
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+    src: url('#{$file-path}.ttf') format('truetype');
+  }
+}
+
+@mixin desktop-xl-min {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin desktop-xl {
+  @media screen and (max-width: 1399.98px) {
+    @content;
+  }
+}
+
+@mixin desktop-min {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+@mixin laptop-min {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: 991.98px) {
+    @content;
+  }
+}
+
+@mixin tablet-min {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 767.98px) {
+    @content;
+  }
+}
+
+@mixin phone-min {
+  @media screen and (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media screen and (max-width: 575.98px) {
+    @content;
+  }
+}

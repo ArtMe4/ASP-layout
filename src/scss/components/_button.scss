@@ -1,0 +1,90 @@
+.button {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: max-content;
+  max-width: 100%;
+  background: #33A4D5;
+  border-radius: 3px;
+  color: $white;
+  height: 54px;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0 40px;
+
+  @include desktop {
+    padding: 0 30px;
+  }
+
+  @include laptop {
+    height: 44px;
+  }
+
+  &:not(.button_disabled) {
+
+    &:hover {
+      background: #2792C9;
+      color: $white;
+    }
+
+    &:active {
+      background: #2188C2;
+    }
+
+  }
+
+  &_disabled {
+    background: #D6E1F0;
+    cursor: not-allowed;
+  }
+
+  &_invert {
+
+    color: #33A4D4;
+    border: 1px solid #33A4D4;
+    background: transparent;
+
+    &:not(.button_disabled) {
+
+      &:hover {
+        background: transparent;
+        color: #2792C9;
+        border-color: #2792C9;
+      }
+
+      &:active {
+        background: transparent;
+        color: #2188C2;
+        border-color: #2188C2;
+      }
+
+    }
+
+    &.button {
+
+      &_disabled {
+        color: #D6E1F0;
+        border-color: #D6E1F0;
+      }
+
+    }
+
+  }
+
+  &_thin {
+    height: 44px;
+  }
+
+}
+
+.sandbox_buttons {
+
+  .button {
+    margin-bottom: 20px;
+  }
+
+}
