@@ -1,0 +1,192 @@
+.header {
+
+  background: #051127;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @include laptop {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  @include tablet {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+
+  &_transparent {
+    background: transparent;
+  }
+
+  &__inner {
+
+    display: grid;
+    grid-template-columns: 1fr 226px 1fr;
+    grid-gap: 68px;
+
+    @include desktop {
+      grid-template-columns: 1fr 200px 1fr;
+      grid-gap: 52px;
+    }
+
+    @include laptop {
+      grid-template-columns: 1fr 145px 1fr;
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      grid-gap: 15px;
+    }
+
+  }
+
+  &__mobile-menu {
+
+    display: none;
+
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
+
+  }
+
+  &__mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    background: $dark-blue;
+  }
+
+  &_transparent {
+
+    .header {
+
+      &__mobile-toggle {
+        background: #051127;
+      }
+
+    }
+
+  }
+
+  &__menu {
+
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 5px;
+
+    @include laptop {
+      padding: 6px 3px;
+      justify-content: space-around;
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+  }
+
+  &__link {
+
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $white;
+
+    @include laptop {
+      font-size: 13px;
+      line-height: 18px;
+    }
+
+    &_desktop {
+
+      @include laptop {
+        display: none;
+      }
+
+    }
+
+    &_courses {
+
+      &::before {
+        content: "";
+        width: 16px;
+        height: 15px;
+        background: url("../images/header/dots.svg") center no-repeat;
+        background-size: contain;
+        margin-right: 15px;
+
+        @include laptop {
+          width: 18px;
+          height: 11px;
+          background: url("../images/header/burger.svg") center no-repeat;
+          background-size: contain;
+          margin-right: 10px;
+        }
+
+      }
+
+    }
+
+  }
+
+  &__language {
+
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: $white;
+    text-decoration: underline;
+
+    &_active {
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    &:not(:last-child) {
+
+      margin-right: 5px;
+
+      &::after {
+        content: "|";
+        margin-left: 5px;
+      }
+
+    }
+
+  }
+
+  &__logo {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet {
+      width: 145px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    a {
+      display: flex;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+  }
+
+}

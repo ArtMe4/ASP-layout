@@ -1,0 +1,97 @@
+.courses-menu {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background: $dark-gray;
+    z-index: -1;
+  }
+
+  &__inner {
+    background: $white;
+  }
+
+  &__left {
+    position: relative;
+    padding-top: 47px;
+    background: $dark-gray;
+    color: $white;
+  }
+
+  &__title {
+
+    position: relative;
+    margin-top: 33px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    padding-bottom: 23px;
+    width: max-content;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: url("../images/courses-menu/decor.svg") center no-repeat;
+      background-size: auto 3px;
+    }
+
+  }
+
+  &__levels {
+
+    margin-top: 60px;
+    list-style: none;
+    padding: 0 60px 0 0;
+
+    .nav-item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+  }
+
+  &__level {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: $white;
+
+    &::after {
+      content: "";
+      width: 26px;
+      height: 26px;
+      background: url("../images/courses-menu/arrow.svg") center no-repeat;
+      background-size: contain;
+    }
+
+    &.active, &:hover {
+
+      color: #33A4D4;
+
+      &::after {
+        background: url("../images/courses-menu/arrow-blue.svg") center no-repeat;
+        background-size: contain;
+      }
+
+    }
+
+  }
+
+}

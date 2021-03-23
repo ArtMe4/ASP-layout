@@ -1,0 +1,181 @@
+.review {
+
+  &:not(:first-child) {
+
+    margin-top: 57px;
+
+    @include laptop {
+      margin-top: 30px;
+    }
+
+  }
+
+  &::after {
+
+    content: "";
+    display: block;
+    margin-top: 30px;
+    width: 100%;
+    height: 3px;
+    background: url("../images/review/decor.svg") center no-repeat;
+    background-size: auto 3px;
+
+    @include laptop {
+      margin-top: 12px;
+    }
+
+    @include tablet {
+      margin-top: 22px;
+    }
+
+  }
+
+  &__top {
+
+    display: flex;
+    align-items: flex-end;
+
+    @include tablet {
+      align-items: center;
+    }
+
+  }
+
+  &__photo {
+
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 30px;
+
+    @include laptop {
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
+    }
+
+    @include tablet {
+      width: 60px;
+      height: 60px;
+      margin-right: 15px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  }
+
+  &__name-and-age {
+    display: flex;
+    align-items: center;
+  }
+
+  &__name {
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    color: $dark-blue;
+
+    @include laptop {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+  }
+
+  &__age {
+
+    margin-left: 10px;
+
+    @include tablet {
+      display: none;
+    }
+
+    &::before {
+
+      content: "|";
+      opacity: .6;
+      margin-right: 10px;
+
+      @include laptop {
+        opacity: 1;
+      }
+
+    }
+
+  }
+
+  &__position, &__age {
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: $dark-blue;
+
+    @include laptop {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include tablet {
+      font-size: 12px;
+      line-height: 18px;
+      color: $dark-gray;
+    }
+
+  }
+
+  &__position {
+
+    @include laptop {
+      margin-top: 5px;
+    }
+
+    @include tablet {
+      margin-top: 0;
+    }
+
+  }
+
+  &__date {
+
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #949BA4;
+
+    @include laptop {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include tablet {
+      margin-top: 0;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+  }
+
+  &__text {
+
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 26px;
+    color: $dark-gray;
+
+    @include laptop {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+  }
+
+}

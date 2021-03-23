@@ -1,0 +1,30 @@
+.title {
+
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 52px;
+  color: $blue;
+
+  @include laptop {
+    font-size: 25px;
+    line-height: 34px;
+  }
+
+  &_small {
+
+    font-size: 34px;
+    line-height: 48px;
+
+    @include laptop {
+      font-size: 22px;
+      line-height: 32px;
+    }
+
+  }
+
+  &_center {
+    text-align: center;
+  }
+
+}

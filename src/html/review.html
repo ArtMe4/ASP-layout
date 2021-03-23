@@ -1,0 +1,37 @@
+@@include('common/header.html')
+
+<div class="container sandbox">
+    <div class="row">
+        <div class="col-md-7">
+
+            @@for (var i = 0; i < 3; i++) {
+
+                <div class="review">
+                    <div class="review__top">
+                        <div class="review__photo">
+                            <img src="images/review/photo.png" alt="">
+                        </div>
+                        <div class="review__info">
+                            <div class="review__name-and-age">
+                                <div class="review__name">Юлия блаблабла</div>
+                                <div class="review__age">35 лет, Москва</div>
+                            </div>
+                            <div class="review__position">Мастер высшей категории</div>
+                            <div class="review__date">21.12.2020</div>
+                        </div>
+                    </div>
+                    <div class="review__text">
+                        О Юленьке я узнала на форуме Академии корсета,сначала просто часами рассматривала её работы.
+                        Все кто видел со мной согласятся,что это просто восторг!!!!! Поэтому когда вышел первый Юлин
+                        диск я без раздумий его заказала,знания и опыт которыми делится Юля просто бесценны!
+                        Уроки изложены грамотно,доступно и понятно!! С тех пор я приобретаю все Юлины диски
+                    </div>
+                </div>
+
+            }
+
+        </div>
+    </div>
+</div>
+
+@@include('common/footer.html')

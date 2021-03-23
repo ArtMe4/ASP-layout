@@ -1,0 +1,32 @@
+.sandbox {
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &_title {
+
+    .title {
+      margin-bottom: 20px;
+    }
+
+  }
+
+  &_buttons {
+
+    .button {
+      margin-bottom: 20px;
+    }
+
+  }
+
+  &_header {
+
+    background: #3D4C68;
+
+    .header {
+      margin-bottom: 30px;
+    }
+
+  }
+
+}

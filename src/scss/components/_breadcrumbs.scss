@@ -1,0 +1,29 @@
+.breadcrumbs {
+
+  margin-top: 20px;
+
+  &__item {
+
+    font-size: 14px;
+    line-height: 22px;
+    color: #33A4D4;
+    display: inline;
+
+    &:not(:last-child) {
+
+      margin-right: 6px;
+
+      &::after {
+        content: "/";
+        margin-left: 6px;
+      }
+
+    }
+
+    &:last-child {
+      color: #949BA4;
+    }
+
+  }
+
+}

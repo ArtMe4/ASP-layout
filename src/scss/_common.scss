@@ -1,6 +1,7 @@
 @include font-face('Gilroy', '../fonts/Gilroy-Regular');
 @include font-face('Gilroy', '../fonts/Gilroy-Medium', 500);
 @include font-face('Gilroy', '../fonts/Gilroy-Semibold', 600);
+@include font-face('Gilroy', '../fonts/Gilroy-Bold', 700);
 
 *,
 *::before,
@@ -39,7 +40,24 @@ h6 {
   padding: unset;
 }
 
-.sandbox {
-  padding-top: 50px;
-  padding-bottom: 50px;
+.tab-content {
+
+  > .tab-pane {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+
+}
+
+.fade {
+
+  transition: opacity .15s linear;
+
+  &:not(.show) {
+    opacity: 0;
+  }
+
 }

@@ -1,0 +1,46 @@
+@@include('common/header.html')
+
+<div class="courses-menu">
+    <div class="courses-menu__inner container">
+        <div class="row">
+            <div class="courses-menu__left col-lg-4">
+                <a href="#" class="courses-menu__close">
+                    <img src="images/courses-menu/close.svg" alt="">
+                </a>
+                <div class="courses-menu__title">Все курсы</div>
+
+                <ul class="courses-menu__levels nav" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="courses-menu__level nav-link active" data-bs-toggle="tab" href="#tab-beginning"
+                           role="tab">Начинающие мастера</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="courses-menu__level nav-link" data-bs-toggle="tab" href="#tab-experienced"
+                           role="tab">Опытные мастера</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="courses-menu__level nav-link" data-bs-toggle="tab" href="#tab-masters"
+                           role="tab">Мастера свадебного платья</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="courses-menu__level nav-link" data-bs-toggle="tab" href="#tab-experienced-masters"
+                           role="tab">Мастера с большим стажем</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-lg-8">
+                <div class="product__tabs-content tab-content">
+                    <div class="tab-pane fade show active" id="tab-beginning" role="tabpanel">Характеристики</div>
+                    <div class="tab-pane fade" id="tab-experienced" role="tabpanel">
+                        123
+                    </div>
+                    <div class="tab-pane fade" role="tabpanel" id="tab-masters">Как заказать</div>
+                    <div class="tab-pane fade" role="tabpanel" id="tab-experienced-masters">Установка</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('common/footer.html')
