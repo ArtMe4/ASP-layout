@@ -1,0 +1,50 @@
+@@include('common/header.html')
+
+<div class="sandbox container">
+    <div class="row">
+        <div class="col-lg-7">
+
+            <div class="calendar">
+                <div class="calendar__title">Март 2021</div>
+                <div class="calendar__component">
+                    <div class="calendar__day-of-week">ПН</div>
+                    <div class="calendar__day-of-week">ВТ</div>
+                    <div class="calendar__day-of-week">СР</div>
+                    <div class="calendar__day-of-week">ЧТ</div>
+                    <div class="calendar__day-of-week">ПТ</div>
+                    <div class="calendar__day-of-week calendar__day-of-week__weekend">СБ</div>
+                    <div class="calendar__day-of-week calendar__day-of-week__weekend">ВС</div>
+
+                    <div class="calendar__day"></div>
+                    <div class="calendar__day"></div>
+                    @@for (var i = 1; i <= 10; i++) {
+                        <div class="calendar__day">
+                            <div class="calendar__day-content">
+                                <div class="calendar__number">`+i+`</div>
+                            </div>
+                        </div>
+                    }
+                    @@for (var i = 11; i <= 20; i++) {
+                    <div class="calendar__day calendar__day_has-event">
+                        <div class="calendar__day-content">
+                            <div class="calendar__number">`+i+`</div>
+                            <div class="calendar__type">Online-курс</div>
+                            <div class="calendar__name">Свадебный наряд моей дочери</div>
+                        </div>
+                    </div>
+                    }
+                    @@for (var i = 21; i <= 30; i++) {
+                        <div class="calendar__day">
+                            <div class="calendar__day-content">
+                                <div class="calendar__number">`+i+`</div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@@include('common/footer.html')

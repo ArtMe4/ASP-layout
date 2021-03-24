@@ -1,46 +1,85 @@
 @@include('common/header.html')
 
-<div class="courses-menu">
-    <div class="courses-menu__inner container">
-        <div class="row">
-            <div class="courses-menu__left col-lg-4">
-                <a href="#" class="courses-menu__close">
-                    <img src="images/courses-menu/close.svg" alt="">
-                </a>
-                <div class="courses-menu__title">Все курсы</div>
+<div class="sandbox sandbox_courses-menu">
 
-                <ul class="courses-menu__levels nav" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <a class="courses-menu__level nav-link active" data-bs-toggle="tab" href="#tab-beginning"
-                           role="tab">Начинающие мастера</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="courses-menu__level nav-link" data-bs-toggle="tab" href="#tab-experienced"
-                           role="tab">Опытные мастера</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="courses-menu__level nav-link" data-bs-toggle="tab" href="#tab-masters"
-                           role="tab">Мастера свадебного платья</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="courses-menu__level nav-link" data-bs-toggle="tab" href="#tab-experienced-masters"
-                           role="tab">Мастера с большим стажем</a>
-                    </li>
-                </ul>
-
+    <div class="courses-menu">
+        <div class="courses-menu__inner container">
+            <div class="row">
+                <div class="courses-menu__head courses-menu__left col-lg-4 col-md-5">
+                    <a href="#" class="courses-menu__close">
+                        <img src="images/courses-menu/close.svg" alt="">
+                    </a>
+                    <div class="courses-menu__title">Все курсы</div>
+                </div>
             </div>
-            <div class="col-lg-8">
-                <div class="product__tabs-content tab-content">
-                    <div class="tab-pane fade show active" id="tab-beginning" role="tabpanel">Характеристики</div>
-                    <div class="tab-pane fade" id="tab-experienced" role="tabpanel">
-                        123
+            <div class="row">
+                <div class="courses-menu__content courses-menu__left col-lg-4 col-md-5">
+                    <ul class="courses-menu__levels nav" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="courses-menu__level nav-link active" data-bs-toggle="tab" href="#tab-beginning"
+                               role="tab">Начинающие мастера</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="courses-menu__level nav-link" data-bs-toggle="tab" href="#tab-experienced"
+                               role="tab">Опытные мастера</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="courses-menu__level nav-link" data-bs-toggle="tab" href="#tab-masters"
+                               role="tab">Мастера свадебного платья</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="courses-menu__level nav-link" data-bs-toggle="tab" href="#tab-experienced-masters"
+                               role="tab">Мастера с большим стажем</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="courses-menu__level courses-menu__level_calendar nav-link"
+                               data-bs-toggle="tab" href="#tab-calendar" role="tab">Календарь событий</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="courses-menu__content courses-menu__content_links col-lg-7 offset-lg-1 col-md-7">
+                    <div class="product__tabs-content tab-content">
+                        <div class="tab-pane fade show active courses-menu__courses-wrap" id="tab-beginning" role="tabpanel">
+                            <div class="courses-menu__tags">
+                                <a href="javascript:void(0)" class="courses-menu__tag courses-menu__tag_active"
+                                   data-tag="all">Любые</a>
+                                <a href="javascript:void(0)" class="courses-menu__tag" data-tag="paid">Платные</a>
+                                <a href="javascript:void(0)" class="courses-menu__tag" data-tag="free">Бесплатные</a>
+                                <a href="javascript:void(0)" class="courses-menu__tag courses-menu__tag_online">Онлайн</a>
+                            </div>
+                            <div class="courses-menu__courses">
+                                @@for (var i = 0; i < 3; i++) {
+                                    <a href="#" class="courses-menu__link" data-tag="paid" data-online="true">
+                                        Платный онлайн курс в две строчки в две строчки
+                                    </a>
+                                }
+                                @@for (var i = 0; i < 2; i++) {
+                                    <a href="#" class="courses-menu__link" data-tag="paid" data-online="false">
+                                        Платный оффлайн курс в две строчки в две строчки
+                                    </a>
+                                }
+                                @@for (var i = 0; i < 2; i++) {
+                                    <a href="#" class="courses-menu__link" data-tag="free" data-online="true">
+                                        Бесплатный онлайн курс в две строчки в две строчки
+                                    </a>
+                                }
+                                @@for (var i = 0; i < 4; i++) {
+                                    <a href="#" class="courses-menu__link" data-tag="free" data-online="false">
+                                        Бесплатный оффлайн курс в две строчки в две строчки
+                                    </a>
+                                }
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab-experienced" role="tabpanel">...</div>
+                        <div class="tab-pane fade" role="tabpanel" id="tab-masters">...</div>
+                        <div class="tab-pane fade" role="tabpanel" id="tab-experienced-masters">...</div>
+                        <div class="tab-pane fade" role="tabpanel" id="tab-calendar">...</div>
                     </div>
-                    <div class="tab-pane fade" role="tabpanel" id="tab-masters">Как заказать</div>
-                    <div class="tab-pane fade" role="tabpanel" id="tab-experienced-masters">Установка</div>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
 
 @@include('common/footer.html')
