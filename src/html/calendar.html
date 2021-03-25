@@ -2,10 +2,10 @@
 
 <div class="sandbox container">
     <div class="row">
-        <div class="col-lg-7">
+        <div class="col-md-7">
 
-            <div class="calendar">
-                <div class="calendar__title">Март 2021</div>
+            <div class="calendar" id="calendarApp" v-cloak>
+                <div class="calendar__title">{{ month }} {{ year }}</div>
                 <div class="calendar__component">
                     <div class="calendar__day-of-week">ПН</div>
                     <div class="calendar__day-of-week">ВТ</div>
@@ -15,31 +15,27 @@
                     <div class="calendar__day-of-week calendar__day-of-week__weekend">СБ</div>
                     <div class="calendar__day-of-week calendar__day-of-week__weekend">ВС</div>
 
-                    <div class="calendar__day"></div>
-                    <div class="calendar__day"></div>
-                    @@for (var i = 1; i <= 10; i++) {
-                        <div class="calendar__day">
-                            <div class="calendar__day-content">
-                                <div class="calendar__number">`+i+`</div>
-                            </div>
-                        </div>
-                    }
-                    @@for (var i = 11; i <= 20; i++) {
-                    <div class="calendar__day calendar__day_has-event">
+                    <!-- empty days (offset) -->
+                    <div class="calendar__day" v-for="index in firstDayOffset"></div>
+
+                    <!-- days -->
+                    <div class="calendar__day" v-for="index in daysInMonth" v-on:click="selectEvent(index)"
+                         :class="{ 'calendar__day_has-event' : getEventByDay(index), 'calendar__day_active' : selectedDay == index }">
                         <div class="calendar__day-content">
-                            <div class="calendar__number">`+i+`</div>
-                            <div class="calendar__type">Online-курс</div>
-                            <div class="calendar__name">Свадебный наряд моей дочери</div>
+                            <div class="calendar__number">{{ index }}</div>
+                            <div v-if="getEventByDay(index)">
+                                <div class="calendar__type">{{ getEventByDay(index).type }}</div>
+                                <div class="calendar__name">{{ getEventByDay(index).name }}</div>
+                            </div>
                         </div>
                     </div>
-                    }
-                    @@for (var i = 21; i <= 30; i++) {
-                        <div class="calendar__day">
-                            <div class="calendar__day-content">
-                                <div class="calendar__number">`+i+`</div>
-                            </div>
-                        </div>
-                    }
+                </div>
+                <div class="calendar__tile" v-if="selectedEvent" v-on:click="goToEvent(selectedEvent)">
+                    <div class="calendar__date">{{ selectedEvent.day }} {{ month_genitive }}</div>
+                    <div class="calendar__tile-content">
+                        <div class="calendar__type">{{ selectedEvent.type }}</div>
+                        <div class="calendar__name">{{ selectedEvent.name }}</div>
+                    </div>
                 </div>
             </div>
 

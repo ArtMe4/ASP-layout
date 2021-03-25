@@ -80,6 +80,10 @@ h6 {
   opacity: 0;
 }
 
+[v-cloak] {
+  display: none;
+}
+
 .sandbox {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -715,14 +719,6 @@ h6 {
   transition: transform 150ms ease-in-out;
 }
 
-.calendar__day_has-event:hover {
-  background: #3d4c68;
-  color: #fff;
-  cursor: pointer;
-  transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(61, 76, 104, 0.4);
-}
-
 .calendar__day-content {
   position: absolute;
   top: 5px;
@@ -747,6 +743,39 @@ h6 {
   line-height: 14px;
 }
 
+.calendar__tile {
+  margin-top: 37px;
+  background: #D6E1F0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.calendar__tile-content {
+  padding: 20px 20px 30px;
+}
+
+.calendar__tile .calendar__type,
+.calendar__tile .calendar__name {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  color: #3d4c68;
+}
+
+.calendar__tile .calendar__name {
+  margin-top: 10px;
+}
+
+.calendar__date {
+  border-radius: 3px;
+  padding: 0 20px;
+  background: #3d4c68;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+}
+
 @media screen and (min-width: 576px) {
   .course-tile__prices_phone {
     display: none;
@@ -763,6 +792,20 @@ h6 {
   }
 
   .course-tile__btn_tablet {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .calendar__day_has-event:hover {
+    background: #3d4c68;
+    color: #fff;
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(61, 76, 104, 0.4);
+  }
+
+  .calendar__tile {
     display: none;
   }
 }
@@ -792,6 +835,41 @@ h6 {
   .header__inner {
     grid-template-columns: 1fr 200px 1fr;
     grid-gap: 52px;
+  }
+
+  .calendar__day-of-week {
+    text-align: center;
+    font-size: 11px;
+    line-height: 15px;
+    margin-bottom: 17px;
+  }
+
+  .calendar__day {
+    border-radius: 5px;
+    border: none;
+  }
+
+  .calendar__day_has-event {
+    border: 1px solid #33A4D5;
+  }
+
+  .calendar__day_active {
+    background: #33A4D5;
+    color: #fff;
+  }
+
+  .calendar__day-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .calendar__type {
+    display: none;
+  }
+
+  .calendar__name {
+    display: none;
   }
 }
 
@@ -1003,6 +1081,15 @@ h6 {
     font-size: 14px;
     line-height: 20px;
   }
+
+  .calendar__title {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .calendar__component {
+    margin-top: 20px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -1064,6 +1151,14 @@ h6 {
     width: 145px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .calendar__title {
+    text-align: center;
+  }
+
+  .calendar__tile {
+    margin-top: 20px;
   }
 }
 
