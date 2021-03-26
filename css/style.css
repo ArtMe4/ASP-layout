@@ -996,6 +996,99 @@ h6 {
   width: auto;
 }
 
+.stages__wrap {
+  margin-top: 60px;
+}
+
+.stages__row {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.stages__row::before {
+  content: "";
+  position: absolute;
+  left: -100px;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: #085F97;
+  transform-origin: left;
+  transition: transform ease-in-out 500ms;
+  transform: scaleX(0);
+}
+
+.stages__row:nth-child(even)::before {
+  transform-origin: right;
+}
+
+.stages__row_active::before {
+  transform: scaleX(1);
+}
+
+.stages__row:not(:last-child) {
+  margin-bottom: 78px;
+}
+
+.stages__row:not(:last-child):nth-child(odd)::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  right: 0;
+  bottom: 0;
+  height: 198px;
+  background: #085F97;
+  transform: translateY(100%);
+}
+
+.stages__row:not(:last-child):nth-child(even)::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  left: -100px;
+  bottom: 0;
+  height: 198px;
+  background: #085F97;
+  transform: translateY(100%);
+}
+
+.stages__item {
+  position: relative;
+  height: 120px;
+  width: 50%;
+  display: flex;
+  align-items: start;
+}
+
+.stages__icon {
+  height: 100%;
+  width: auto;
+  flex-shrink: 0;
+  background: #fff;
+}
+
+.stages__info {
+  position: relative;
+  padding-left: 30px;
+  padding-top: 9px;
+}
+
+.stages__step {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  color: #949BA4;
+}
+
+.stages__name {
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  color: #0A2555;
+}
+
 @media screen and (min-width: 576px) {
   .course-tile__prices_phone {
     display: none;

@@ -1,0 +1,44 @@
+@@include('common/header.html')
+
+<div class="container sandbox sandbox_stages">
+
+    <div class="stages">
+        <div class="title">Как проходит обучение</div>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="stages__wrap">
+                    @@for (var i = 0; i < 2; i++) {
+                    <div class="stages__row">
+                        <div class="stages__item">
+                            <img src="images/stages/1.svg" class="stages__icon" alt="">
+                            <div class="stages__info">
+                                <div class="stages__step">Начало обучения</div>
+                                <div class="stages__name">Базовые навыки<br>рукодельницы</div>
+                            </div>
+                        </div>
+                        <div class="stages__item">
+                            <img src="images/stages/1.svg" class="stages__icon" alt="">
+                            <div class="stages__info">
+                                <div class="stages__step">Начало обучения</div>
+                                <div class="stages__name">Базовые навыки<br>рукодельницы</div>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                    <div class="stages__row">
+                        <div class="stages__item">
+                            <img src="images/stages/1.svg" class="stages__icon" alt="">
+                            <div class="stages__info">
+                                <div class="stages__step">Начало обучения</div>
+                                <div class="stages__name">Базовые навыки<br>рукодельницы</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@@include('common/footer.html')
