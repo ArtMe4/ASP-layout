@@ -65,3 +65,47 @@ h6 {
 [v-cloak] {
   display: none;
 }
+
+.swiper-container {
+
+  .swiper-pagination {
+
+    position: static;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+
+    @include laptop {
+      margin-top: 20px;
+    }
+
+    .swiper-pagination-bullet {
+
+      position: relative;
+      margin: 0 7px;
+      width: 13px;
+      height: 13px;
+      background: $white;
+      opacity: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      &-active {
+        border: 1px solid #085F97;
+        background: $white;
+      }
+
+      &::before {
+        content: "";
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: $dark-gray;
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,37 @@
+@@include('common/header.html')
+
+<div class="sandbox container">
+
+    <div class="examples">
+        <div class="title">Чему вы научитесь</div>
+        <div class="examples__subtitle">Примеры работ мастеров академии</div>
+        <div class="examples__sliders">
+            <div class="examples__slider examples__slider_youtube swiper-container">
+                <div class="swiper-wrapper">
+                    @@for (var i = 0; i < 4; i++) {
+                        <div class="examples__slide swiper-slide">
+                            <img src="images/examples/video.jpg" alt="">
+                        </div>
+                    }
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="examples__slider swiper-container">
+                <div class="swiper-wrapper">
+                    @@for (var i = 0; i < 3; i++) {
+                        <div class="examples__slide swiper-slide">
+                            <img src="images/examples/photo-1.jpg" alt="">
+                        </div>
+                        <div class="examples__slide swiper-slide">
+                            <img src="images/examples/photo-2.jpg" alt="">
+                        </div>
+                    }
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@@include('common/footer.html')

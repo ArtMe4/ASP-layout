@@ -1,0 +1,116 @@
+.examples {
+
+  &__subtitle {
+
+    margin-top: 18px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: $dark-blue;
+
+    @include laptop {
+      margin-top: 8px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include tablet {
+      margin-top: 0;
+    }
+
+  }
+
+  &__sliders {
+    margin-top: 30px;
+  }
+
+  &__slider {
+
+    overflow: visible;
+
+    .swiper-wrapper {
+
+      height: 308px;
+
+      @include laptop {
+        height: 160px;
+      }
+
+      @include tablet {
+        height: 116px;
+      }
+
+    }
+
+    &_youtube {
+
+      .swiper-wrapper {
+
+        height: 258px;
+
+        @include laptop {
+          height: 150px;
+        }
+
+        @include tablet {
+          height: 135px;
+        }
+
+      }
+
+      .examples {
+
+        &__slide {
+
+          position: relative;
+          cursor: pointer;
+
+          &::before {
+
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 73px;
+            height: 52px;
+            background: url("../images/examples/play.svg") center no-repeat;
+            background-size: contain;
+
+            @include laptop {
+              width: 57px;
+              height: 40px;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    &:not(:last-child) {
+
+      margin-bottom: 40px;
+
+      @include laptop {
+        margin-bottom: 25px;
+      }
+
+    }
+
+  }
+
+  &__slide {
+
+    width: auto;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+
+  }
+
+}
