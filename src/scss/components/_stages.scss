@@ -1,7 +1,13 @@
 .stages {
 
   &__wrap {
+
     margin-top: 60px;
+
+    @include laptop {
+      margin-top: 30px;
+    }
+
   }
 
   &__row {
@@ -10,7 +16,18 @@
     display: flex;
     align-items: flex-end;
 
+    @include tablet {
+
+      flex-direction: column;
+
+      &:nth-child(even) {
+        flex-direction: column-reverse;
+      }
+
+    }
+
     &::before {
+
       content: "";
       position: absolute;
       left: -100px;
@@ -19,8 +36,21 @@
       height: 2px;
       background: $blue;
       transform-origin: left;
-      transition: transform ease-in-out 500ms;
+      transition: transform ease-in-out 700ms;
       transform: scaleX(0);
+
+      @include desktop {
+        left: -80px;
+      }
+
+      @include laptop {
+        left: 0;
+      }
+
+      @include tablet {
+        display: none;
+      }
+
     }
 
     &:nth-child(even) {
@@ -43,6 +73,14 @@
 
       margin-bottom: 78px;
 
+      @include laptop {
+        margin-bottom: 58px;
+      }
+
+      @include tablet {
+        margin-bottom: 0;
+      }
+
       &:nth-child(odd) {
 
         &::after {
@@ -50,10 +88,22 @@
           position: absolute;
           width: 2px;
           right: 0;
-          bottom: 0;
+          bottom: -198px;
           height: 198px;
           background: $blue;
-          transform: translateY(100%);
+          transform-origin: top;
+          transition: transform ease-in-out 350ms;
+          transform: scaleY(0);
+
+          @include laptop {
+            bottom: -148px;
+            height: 148px;
+          }
+
+          @include tablet {
+            display: none;
+          }
+
         }
 
       }
@@ -61,14 +111,74 @@
       &:nth-child(even) {
 
         &::after {
+
           content: "";
           position: absolute;
           width: 2px;
           left: -100px;
-          bottom: 0;
+          bottom: -198px;
           height: 198px;
           background: $blue;
-          transform: translateY(100%);
+          transform-origin: top;
+          transition: transform ease-in-out 350ms;
+          transform: scaleY(0);
+
+          @include desktop {
+            left: -80px;
+          }
+
+          @include laptop {
+            left: 0;
+            bottom: -148px;
+            height: 148px;
+          }
+
+          @include tablet {
+            display: none;
+          }
+
+        }
+
+      }
+
+    }
+
+    &_active-vertical {
+
+      &::after {
+        transform: scaleY(1) !important;
+      }
+
+    }
+
+  }
+
+  &__item {
+
+    position: relative;
+    height: 120px;
+    width: 50%;
+    display: flex;
+    align-items: start;
+
+    @include laptop {
+      height: 90px;
+      padding-left: 50px;
+    }
+
+    @include tablet {
+      width: 100%;
+      height: auto;
+      padding-left: 0;
+      margin-bottom: 15px;
+    }
+
+    &_active {
+
+      .stages {
+
+        &__icon img, &__info {
+          opacity: 1;
         }
 
       }
@@ -77,40 +187,101 @@
 
   }
 
-  &__item {
-    position: relative;
-    height: 120px;
-    width: 50%;
-    display: flex;
-    align-items: start;
-  }
-
   &__icon {
+
     height: 100%;
-    width: auto;
     flex-shrink: 0;
     background: $white;
+
+    @include tablet {
+
+      position: relative;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: -19px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: $dark-gray;
+      }
+
+    }
+
+    img {
+
+      height: 100%;
+      width: auto;
+      opacity: 0;
+      transition: opacity 250ms ease-in;
+
+      @include tablet {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+      }
+
+    }
+
   }
 
   &__info {
+
     position: relative;
-    padding-left: 30px;
+    margin-left: 30px;
     padding-top: 9px;
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+
+    @include tablet {
+      padding-top: 0;
+      margin-left: 36px;
+    }
+
   }
 
   &__step {
+
     font-weight: 500;
     font-size: 15px;
     line-height: 22px;
     color: #949BA4;
+
+    @include laptop {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include tablet {
+      font-size: 13px;
+      line-height: 18px;
+    }
+
   }
 
   &__name {
+
     margin-top: 5px;
     font-weight: 600;
     font-size: 18px;
     line-height: 26px;
     color: $dark-blue;
+
+    @include laptop {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include tablet {
+      margin-top: 0;
+    }
+
   }
 
 }
