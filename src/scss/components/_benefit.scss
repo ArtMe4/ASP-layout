@@ -1,0 +1,224 @@
+.benefit {
+
+  margin-top: -126px;
+
+  @include laptop {
+    margin-top: -55px;
+  }
+
+  &__hero {
+
+    background: $white;
+    box-shadow: 0px -80px 50px rgba(17, 33, 62, 0.15);
+    border-radius: 3px;
+    padding: 52px 50px 0;
+
+    @include laptop {
+      padding: 30px 30px 0;
+    }
+
+  }
+
+  &__title {
+
+    position: relative;
+    text-align: center;
+    padding-bottom: 24px;
+
+    @include laptop {
+      padding-bottom: 16px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 4px;
+      left: 0;
+      right: 0;
+      background: url("../images/benefit/decor.svg") center no-repeat;
+      background-size: auto 100%;
+    }
+
+  }
+
+  &__description {
+
+    margin-top: 25px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: $dark-blue;
+
+    @include laptop {
+      margin-top: 16px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+  }
+
+  &__grid {
+
+    margin-top: 57px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 272px;
+    grid-gap: 30px;
+
+    @include laptop {
+      margin-top: 40px;
+      grid-gap: 20px;
+      grid-auto-rows: 180px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+
+  &__tile {
+
+    position: relative;
+    z-index: 1;
+    background: $white;
+    box-shadow: 0 5px 20px rgba(17, 33, 62, 0.15);
+    border-radius: 3px;
+    padding: 45px 45px 0;
+    overflow: hidden;
+
+    @include desktop {
+      padding: 34px 34px 0;
+    }
+
+    @include laptop-min {
+
+      &_vertical {
+        grid-row: span 2;
+      }
+
+      &_horizontal {
+        grid-column: span 2;
+      }
+
+    }
+
+    &::before, &::after {
+
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 20px;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: url("../images/benefit/tile-decor.svg") top left no-repeat;
+
+      @include desktop {
+        top: 15px;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+      }
+
+    }
+
+    &::after {
+      transform: rotate(180deg);
+    }
+
+    &-content {
+      position: relative;
+      z-index: 3;
+    }
+
+  }
+
+  &__image {
+    width: 101%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+    object-fit: cover;
+    -webkit-clip-path: circle(0 at 50px 50px);
+    clip-path: circle(0 at 50px 50px);
+    -webkit-transition: -webkit-clip-path 0.5s;
+    transition: -webkit-clip-path 0.5s;
+    transition: clip-path 0.5s;
+    transition: clip-path 0.5s, -webkit-clip-path 0.5s;
+  }
+
+  &__overlay {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: $dark-blue;
+    opacity: 0;
+    transition: all ease-in-out 0.7s;
+  }
+
+  &__name {
+
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 34px;
+    color: $blue;
+    transition: all ease-in-out 0.7s;
+
+    @include laptop {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+  }
+
+  &__caption {
+
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: $dark-gray;
+    transition: all ease-in-out 0.7s;
+
+    @include laptop {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+  }
+
+  &__tile {
+
+    &:hover {
+
+      .benefit {
+
+        &__image {
+          -webkit-transition: -webkit-clip-path 1s 0.1s;
+          transition: -webkit-clip-path 1s 0.1s;
+          transition: clip-path 1s 0.1s;
+          transition: clip-path 1s 0.1s, -webkit-clip-path 1s 0.1s;
+          -webkit-clip-path: circle(150% at 0 0);
+          clip-path: circle(150% at 0 0);
+        }
+
+        &__overlay {
+          opacity: 0.6;
+        }
+
+        &__name, &__caption {
+          color: $white;
+        }
+
+      }
+
+    }
+
+  }
+
+}

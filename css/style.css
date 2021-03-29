@@ -145,6 +145,15 @@ h6 {
   margin-bottom: 30px;
 }
 
+.sandbox_benefit {
+  padding-top: 0;
+}
+
+.sandbox_benefit .sandbox__block {
+  height: 500px;
+  background: #0A2555;
+}
+
 .course-tile {
   padding: 40px;
   background: #fff;
@@ -1110,6 +1119,145 @@ h6 {
   color: #0A2555;
 }
 
+.benefit {
+  margin-top: -126px;
+}
+
+.benefit__hero {
+  background: #fff;
+  box-shadow: 0px -80px 50px rgba(17, 33, 62, 0.15);
+  border-radius: 3px;
+  padding: 52px 50px 0;
+}
+
+.benefit__title {
+  position: relative;
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+.benefit__title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  left: 0;
+  right: 0;
+  background: url("../images/benefit/decor.svg") center no-repeat;
+  background-size: auto 100%;
+}
+
+.benefit__description {
+  margin-top: 25px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #0A2555;
+}
+
+.benefit__grid {
+  margin-top: 57px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 272px;
+  grid-gap: 30px;
+}
+
+.benefit__tile {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(17, 33, 62, 0.15);
+  border-radius: 3px;
+  padding: 45px 45px 0;
+  overflow: hidden;
+}
+
+.benefit__tile::before,
+.benefit__tile::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: url("../images/benefit/tile-decor.svg") top left no-repeat;
+}
+
+.benefit__tile::after {
+  transform: rotate(180deg);
+}
+
+.benefit__tile-content {
+  position: relative;
+  z-index: 3;
+}
+
+.benefit__image {
+  width: 101%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+  object-fit: cover;
+  -webkit-clip-path: circle(0 at 50px 50px);
+  clip-path: circle(0 at 50px 50px);
+  -webkit-transition: -webkit-clip-path 0.5s;
+  transition: -webkit-clip-path 0.5s;
+  transition: clip-path 0.5s;
+  transition: clip-path 0.5s, -webkit-clip-path 0.5s;
+}
+
+.benefit__overlay {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #0A2555;
+  opacity: 0;
+  transition: all ease-in-out 0.7s;
+}
+
+.benefit__name {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 34px;
+  color: #085F97;
+  transition: all ease-in-out 0.7s;
+}
+
+.benefit__caption {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #3d4c68;
+  transition: all ease-in-out 0.7s;
+}
+
+.benefit__tile:hover .benefit__image {
+  -webkit-transition: -webkit-clip-path 1s 0.1s;
+  transition: -webkit-clip-path 1s 0.1s;
+  transition: clip-path 1s 0.1s;
+  transition: clip-path 1s 0.1s, -webkit-clip-path 1s 0.1s;
+  -webkit-clip-path: circle(150% at 0 0);
+  clip-path: circle(150% at 0 0);
+}
+
+.benefit__tile:hover .benefit__overlay {
+  opacity: 0.6;
+}
+
+.benefit__tile:hover .benefit__name,
+.benefit__tile:hover .benefit__caption {
+  color: #fff;
+}
+
 @media screen and (min-width: 576px) {
   .course-tile__prices_phone {
     display: none;
@@ -1127,6 +1275,14 @@ h6 {
 
   .course-tile__btn_tablet {
     display: none;
+  }
+
+  .benefit__tile_vertical {
+    grid-row: span 2;
+  }
+
+  .benefit__tile_horizontal {
+    grid-column: span 2;
   }
 }
 
@@ -1212,6 +1368,18 @@ h6 {
 
   .stages__row:not(:last-child):nth-child(even)::after {
     left: -80px;
+  }
+
+  .benefit__tile {
+    padding: 34px 34px 0;
+  }
+
+  .benefit__tile::before,
+  .benefit__tile::after {
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
   }
 }
 
@@ -1540,6 +1708,41 @@ h6 {
   }
 
   .stages__name {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .benefit {
+    margin-top: -55px;
+  }
+
+  .benefit__hero {
+    padding: 30px 30px 0;
+  }
+
+  .benefit__title {
+    padding-bottom: 16px;
+  }
+
+  .benefit__description {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .benefit__grid {
+    margin-top: 40px;
+    grid-gap: 20px;
+    grid-auto-rows: 180px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefit__name {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .benefit__caption {
     font-size: 14px;
     line-height: 20px;
   }
