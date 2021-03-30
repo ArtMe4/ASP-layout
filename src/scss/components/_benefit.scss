@@ -6,6 +6,10 @@
     margin-top: -55px;
   }
 
+  @include tablet {
+    margin-top: 35px;
+  }
+
   &__hero {
 
     background: $white;
@@ -15,6 +19,13 @@
 
     @include laptop {
       padding: 30px 30px 0;
+    }
+
+    @include tablet {
+      box-shadow: none;
+      padding: 0;
+      background: unset;
+      border-radius: 0;
     }
 
   }
@@ -72,6 +83,14 @@
       grid-gap: 20px;
       grid-auto-rows: 180px;
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include tablet {
+      margin-top: 30px;
+    }
+
+    @include phone {
+      grid-template-columns: 1fr;
     }
 
   }

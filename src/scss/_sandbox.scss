@@ -48,8 +48,18 @@
     padding-top: 0;
 
     .sandbox__block {
+
       height: 500px;
       background: $dark-blue;
+
+      @include laptop {
+        height: 200px;
+      }
+
+      @include tablet {
+        display: none;
+      }
+
     }
 
   }

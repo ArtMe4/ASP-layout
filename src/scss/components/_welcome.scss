@@ -1,0 +1,128 @@
+.welcome {
+
+  &__photo {
+
+    max-width: 100%;
+
+    @include tablet {
+      display: none;
+    }
+
+  }
+
+  &__right {
+
+    @include laptop {
+      padding-left: 15px;
+      padding-top: 17px;
+    }
+
+    @include tablet {
+      padding-left: 0;
+      padding-top: 0;
+    }
+
+  }
+
+  &__title {
+
+    position: relative;
+    padding-right: 100px;
+
+    @include laptop {
+      padding-right: 90px;
+    }
+
+    &::after {
+
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60px;
+      height: 48px;
+      background: url("../images/welcome/quotes.svg") right top;
+      background-size: contain;
+
+      @include laptop {
+        top: 12px;
+        width: 30px;
+        height: 23px;
+      }
+
+      @include tablet {
+        top: 0;
+        right: 0;
+      }
+
+    }
+
+  }
+
+  &__short {
+
+    margin-top: 35px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: $dark-blue;
+
+    @include laptop {
+      margin-top: 15px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+  }
+
+  &__text {
+
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 26px;
+    color: $dark-gray;
+
+    @include laptop {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    p {
+
+      margin-top: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+    }
+
+  }
+
+  &__buttons {
+
+    margin-top: 35px;
+    display: flex;
+
+    @include laptop {
+      margin-top: 25px;
+    }
+
+  }
+
+  &__button {
+
+    &:not(:last-child) {
+
+      margin-right: 20px;
+
+      @include laptop {
+        margin-right: 10px;
+      }
+
+    }
+
+  }
+
+}

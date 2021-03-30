@@ -1275,6 +1275,58 @@ h6 {
   color: #fff;
 }
 
+.welcome__photo {
+  max-width: 100%;
+}
+
+.welcome__title {
+  position: relative;
+  padding-right: 100px;
+}
+
+.welcome__title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 48px;
+  background: url("../images/welcome/quotes.svg") right top;
+  background-size: contain;
+}
+
+.welcome__short {
+  margin-top: 35px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #0A2555;
+}
+
+.welcome__text {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #3d4c68;
+}
+
+.welcome__text p {
+  margin-top: 0;
+}
+
+.welcome__text p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.welcome__buttons {
+  margin-top: 35px;
+  display: flex;
+}
+
+.welcome__button:not(:last-child) {
+  margin-right: 20px;
+}
+
 @media screen and (min-width: 576px) {
   .course-tile__prices_phone {
     display: none;
@@ -1403,6 +1455,10 @@ h6 {
 @media screen and (max-width: 991.98px) {
   .swiper-container .swiper-pagination {
     margin-top: 20px;
+  }
+
+  .sandbox_benefit .sandbox__block {
+    height: 200px;
   }
 
   .course-tile:not(:last-child) {
@@ -1763,9 +1819,48 @@ h6 {
     font-size: 14px;
     line-height: 20px;
   }
+
+  .welcome__right {
+    padding-left: 15px;
+    padding-top: 17px;
+  }
+
+  .welcome__title {
+    padding-right: 90px;
+  }
+
+  .welcome__title::after {
+    top: 12px;
+    width: 30px;
+    height: 23px;
+  }
+
+  .welcome__short {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .welcome__text {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .welcome__buttons {
+    margin-top: 25px;
+  }
+
+  .welcome__button:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
+  .sandbox_benefit .sandbox__block {
+    display: none;
+  }
+
   .review::after {
     margin-top: 22px;
   }
@@ -1976,6 +2071,35 @@ h6 {
   .stages__name {
     margin-top: 0;
   }
+
+  .benefit {
+    margin-top: 35px;
+  }
+
+  .benefit__hero {
+    box-shadow: none;
+    padding: 0;
+    background: unset;
+    border-radius: 0;
+  }
+
+  .benefit__grid {
+    margin-top: 30px;
+  }
+
+  .welcome__photo {
+    display: none;
+  }
+
+  .welcome__right {
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  .welcome__title::after {
+    top: 0;
+    right: 0;
+  }
 }
 
 @media screen and (max-width: 575.98px) {
@@ -1989,5 +2113,9 @@ h6 {
 
   .course-tile__btn {
     margin-top: 4px;
+  }
+
+  .benefit__grid {
+    grid-template-columns: 1fr;
   }
 }
