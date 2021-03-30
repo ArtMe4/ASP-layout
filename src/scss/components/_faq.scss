@@ -1,0 +1,142 @@
+.faq {
+
+  &__content {
+
+    margin-top: 40px;
+
+    @include laptop {
+      margin-top: 30px;
+    }
+
+  }
+
+  &__tabs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__tab {
+
+    display: block;
+    position: relative;
+    background: rgba(214, 225, 240, 0.6);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: $dark-gray;
+    margin-bottom: 2px;
+    padding: 10px 46px 10px 20px;
+
+    &::after {
+
+      content: "";
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      width: 26px;
+      height: 26px;
+      background: url("../images/faq/arrow-right.svg") center no-repeat;
+      background-size: contain;
+      transition: transform 200ms ease-in-out;
+
+      @include laptop {
+        transform: rotate(90deg);
+      }
+
+    }
+
+    .faq__text {
+      margin-top: 0;
+      display: block;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 500ms ease-in-out;
+    }
+
+    &.active {
+
+      background: $white;
+      color: $dark-blue;
+      font-weight: 700;
+
+      &::after {
+
+        transform: rotate(180deg);
+
+        @include laptop {
+          transform: rotate(270deg);
+        }
+
+      }
+
+      @include laptop {
+
+        .faq__text {
+          margin-top: 16px;
+          max-height: 70vh;
+          overflow-y: auto;
+          font-weight: normal;
+        }
+
+      }
+
+    }
+
+  }
+
+  &__tabs-content {
+
+    padding-left: 40px;
+
+    @include laptop {
+      display: none;
+    }
+
+  }
+
+  &__question-wrap {
+
+    max-height: 320px;
+    overflow-y: auto;
+    padding-right: 37px;
+
+    &::-webkit-scrollbar {
+      border-radius: 10px;
+      width: 3px;
+      background-color: #D6E1F0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $blue;
+    }
+
+  }
+
+  &__question {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+    color: $blue;
+  }
+
+  &__text {
+
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 26px;
+    color: $dark-gray;
+
+    @include laptop {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+  }
+
+  &__button {
+    margin-top: 30px;
+  }
+
+}

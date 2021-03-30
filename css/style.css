@@ -1257,24 +1257,6 @@ h6 {
   transition: all ease-in-out 0.7s;
 }
 
-.benefit__tile:hover .benefit__image {
-  -webkit-transition: -webkit-clip-path 1s 0.1s;
-  transition: -webkit-clip-path 1s 0.1s;
-  transition: clip-path 1s 0.1s;
-  transition: clip-path 1s 0.1s, -webkit-clip-path 1s 0.1s;
-  -webkit-clip-path: circle(150% at 0 0);
-  clip-path: circle(150% at 0 0);
-}
-
-.benefit__tile:hover .benefit__overlay {
-  opacity: 0.6;
-}
-
-.benefit__tile:hover .benefit__name,
-.benefit__tile:hover .benefit__caption {
-  color: #fff;
-}
-
 .welcome__photo {
   max-width: 100%;
 }
@@ -1363,9 +1345,120 @@ h6 {
   height: 100%;
 }
 
+.faq__content {
+  margin-top: 40px;
+}
+
+.faq__tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.faq__tab {
+  display: block;
+  position: relative;
+  background: rgba(214, 225, 240, 0.6);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  color: #3d4c68;
+  margin-bottom: 2px;
+  padding: 10px 46px 10px 20px;
+}
+
+.faq__tab::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 26px;
+  height: 26px;
+  background: url("../images/faq/arrow-right.svg") center no-repeat;
+  background-size: contain;
+  transition: transform 200ms ease-in-out;
+}
+
+.faq__tab .faq__text {
+  margin-top: 0;
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 500ms ease-in-out;
+}
+
+.faq__tab.active {
+  background: #fff;
+  color: #0A2555;
+  font-weight: 700;
+}
+
+.faq__tab.active::after {
+  transform: rotate(180deg);
+}
+
+.faq__tabs-content {
+  padding-left: 40px;
+}
+
+.faq__question-wrap {
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 37px;
+}
+
+.faq__question-wrap::-webkit-scrollbar {
+  border-radius: 10px;
+  width: 3px;
+  background-color: #D6E1F0;
+}
+
+.faq__question-wrap::-webkit-scrollbar-thumb {
+  background: #085F97;
+}
+
+.faq__question {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  color: #085F97;
+}
+
+.faq__text {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #3d4c68;
+}
+
+.faq__button {
+  margin-top: 30px;
+}
+
 @media screen and (min-width: 576px) {
   .course-tile__prices_phone {
     display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .benefit__tile:hover .benefit__image {
+    -webkit-transition: -webkit-clip-path 1s 0.1s;
+    transition: -webkit-clip-path 1s 0.1s;
+    transition: clip-path 1s 0.1s;
+    transition: clip-path 1s 0.1s, -webkit-clip-path 1s 0.1s;
+    -webkit-clip-path: circle(150% at 0 0);
+    clip-path: circle(150% at 0 0);
+  }
+
+  .benefit__tile:hover .benefit__overlay {
+    opacity: 0.6;
+  }
+
+  .benefit__tile:hover .benefit__name,
+  .benefit__tile:hover .benefit__caption {
+    color: #fff;
   }
 }
 
@@ -1899,6 +1992,34 @@ h6 {
     width: 120px;
     height: 120px;
   }
+
+  .faq__content {
+    margin-top: 30px;
+  }
+
+  .faq__tab::after {
+    transform: rotate(90deg);
+  }
+
+  .faq__tab.active::after {
+    transform: rotate(270deg);
+  }
+
+  .faq__tab.active .faq__text {
+    margin-top: 16px;
+    max-height: 70vh;
+    overflow-y: auto;
+    font-weight: normal;
+  }
+
+  .faq__tabs-content {
+    display: none;
+  }
+
+  .faq__text {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -2162,5 +2283,34 @@ h6 {
 
   .benefit__grid {
     grid-template-columns: 1fr;
+    grid-auto-rows: unset;
+  }
+
+  .benefit__tile {
+    padding: 10px 15px 15px;
+  }
+
+  .benefit__tile::before,
+  .benefit__tile::after {
+    display: none;
+  }
+
+  .benefit__tile-content {
+    padding-left: 30px;
+  }
+
+  .benefit__tile-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: url("../images/benefit/diamond.svg") center no-repeat;
+    background-size: contain;
+  }
+
+  .benefit__caption {
+    margin-top: 5px;
   }
 }
