@@ -1,0 +1,20 @@
+@@include('common/header.html')
+
+<div class="container sandbox">
+
+    <div class="instagram">
+        <a href="#" target="_blank" class="instagram__link">Trofimova.asp</a>
+        <div class="instagram__slider swiper-container">
+            <div class="swiper-wrapper">
+                @@for (var i = 0; i < 12; i++) {
+                    <div class="instagram__slide swiper-slide">
+                        <img class="instagram__photo" src="images/instagram/photo.jpg" alt="">
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@@include('common/footer.html')

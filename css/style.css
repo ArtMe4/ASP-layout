@@ -1327,6 +1327,42 @@ h6 {
   margin-right: 20px;
 }
 
+.instagram__link {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #33A4D5;
+  text-transform: uppercase;
+}
+
+.instagram__link::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background: url("../images/instagram/icon.svg") center no-repeat;
+  background-size: contain;
+}
+
+.instagram__slider {
+  margin-top: 30px;
+  overflow: visible;
+}
+
+.instagram__slide {
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+}
+
+.instagram__photo {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (min-width: 576px) {
   .course-tile__prices_phone {
     display: none;
@@ -1853,6 +1889,15 @@ h6 {
 
   .welcome__button:not(:last-child) {
     margin-right: 10px;
+  }
+
+  .instagram__slider {
+    margin-top: 20px;
+  }
+
+  .instagram__slide {
+    width: 120px;
+    height: 120px;
   }
 }
 
