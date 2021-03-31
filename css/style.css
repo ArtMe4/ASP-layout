@@ -1574,6 +1574,31 @@ h6 {
   width: 950px;
 }
 
+.course-hero__photo {
+  height: 358px;
+  background: url("../images/course-hero/photo-bg.png") center no-repeat;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.course-hero__photo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.course-hero__right {
+  padding-left: 26px;
+}
+
+.course-hero__contains {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 26px;
+  color: #949BA4;
+}
+
 @media screen and (min-width: 576px) {
   .course-tile__prices_phone {
     display: none;
@@ -1581,6 +1606,12 @@ h6 {
 }
 
 @media screen and (min-width: 768px) {
+  .review_slide .review__name,
+  .review_slide .review__age,
+  .review_slide .review__position {
+    color: #ffffff;
+  }
+
   .benefit__tile:hover .benefit__image {
     -webkit-transition: -webkit-clip-path 1s 0.1s;
     transition: -webkit-clip-path 1s 0.1s;
@@ -1611,12 +1642,6 @@ h6 {
 
   .course-tile__btn_tablet {
     display: none;
-  }
-
-  .review_slide .review__name,
-  .review_slide .review__age,
-  .review_slide .review__position {
-    color: #ffffff;
   }
 
   .benefit__tile_vertical {
