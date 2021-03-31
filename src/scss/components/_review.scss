@@ -217,7 +217,7 @@
 
       &__name, &__age, &__position {
 
-        @include laptop-min {
+        @include tablet-min {
           color: $white;
         }
 
