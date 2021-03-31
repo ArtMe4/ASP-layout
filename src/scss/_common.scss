@@ -85,7 +85,7 @@ h6 {
       margin: 0 7px;
       width: 13px;
       height: 13px;
-      background: $white;
+      background: transparent;
       opacity: 1;
       display: inline-flex;
       align-items: center;
@@ -93,7 +93,7 @@ h6 {
 
       &-active {
         border: 1px solid #085F97;
-        background: $white;
+        background: transparent;
       }
 
       &::before {
@@ -104,6 +104,77 @@ h6 {
         background: $dark-gray;
       }
 
+    }
+
+    &_white {
+
+      .swiper-pagination-bullet {
+
+        &-active {
+          border-color: #33A4D5;
+        }
+
+        &::before {
+          background: $white;
+        }
+
+      }
+
+    }
+
+  }
+
+  .swiper-buttons {
+
+    display: flex;
+
+    .swiper-button-prev, .swiper-button-next {
+
+      position: static;
+      width: 50px;
+      height: 50px;
+      background: url("../images/common/swiper-arrow.svg") center no-repeat;
+      margin-top: 0;
+
+      &::after {
+        display: none;
+      }
+
+    }
+
+    .swiper-button-prev {
+      margin-right: 10px;
+    }
+
+    .swiper-button-next {
+      transform: rotate(180deg);
+    }
+
+  }
+
+  .swiper-controls {
+
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+
+    @include laptop {
+      margin-top: 20px;
+      justify-content: center;
+    }
+
+    .swiper-buttons {
+
+      margin-right: 50px;
+
+      @include laptop {
+        display: none;
+      }
+
+    }
+
+    .swiper-pagination {
+      margin-top: 0;
     }
 
   }

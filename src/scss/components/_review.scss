@@ -178,4 +178,101 @@
 
   }
 
+
+  //for slider
+
+  &_slide {
+
+    position: relative;
+
+    @include tablet {
+      background: $white;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+      border-radius: 3px;
+      padding: 15px 15px 40px;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    .review {
+
+      &__top {
+
+        padding-top: 16px;
+        padding-left: 264px;
+
+        @include laptop {
+          padding-left: 174px;
+          padding-top: 10px;
+        }
+
+        @include tablet {
+          padding-left: 0;
+          padding-top: 0;
+        }
+
+      }
+
+      &__name, &__age, &__position {
+
+        @include laptop-min {
+          color: $white;
+        }
+
+      }
+
+      &__photo {
+
+        position: absolute;
+        top: 0;
+        left: 40px;
+        width: 186px;
+        height: 186px;
+        padding: 10px;
+        background: $white;
+        margin-right: 0;
+
+        @include laptop {
+          width: 130px;
+          height: 130px;
+          padding: 5px;
+          left: 15px;
+        }
+
+        @include tablet {
+          position: static;
+          width: 60px;
+          height: 60px;
+          padding: 0;
+          margin-right: 15px;
+        }
+
+      }
+
+      &__text {
+
+        background: $white;
+        padding: 30px 55px 40px 264px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+        border-radius: 3px;
+
+        @include laptop {
+          padding: 23px 30px 30px 174px;
+          margin-top: 20px;
+        }
+
+        @include tablet {
+          padding: 0;
+          background: unset;
+          box-shadow: none;
+        }
+
+      }
+
+    }
+
+  }
+
 }

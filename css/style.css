@@ -96,7 +96,7 @@ h6 {
   margin: 0 7px;
   width: 13px;
   height: 13px;
-  background: #fff;
+  background: transparent;
   opacity: 1;
   display: inline-flex;
   align-items: center;
@@ -105,7 +105,7 @@ h6 {
 
 .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
   border: 1px solid #085F97;
-  background: #fff;
+  background: transparent;
 }
 
 .swiper-container .swiper-pagination .swiper-pagination-bullet::before {
@@ -114,6 +114,54 @@ h6 {
   height: 3px;
   border-radius: 50%;
   background: #3d4c68;
+}
+
+.swiper-container .swiper-pagination_white .swiper-pagination-bullet-active {
+  border-color: #33A4D5;
+}
+
+.swiper-container .swiper-pagination_white .swiper-pagination-bullet::before {
+  background: #ffffff;
+}
+
+.swiper-container .swiper-buttons {
+  display: flex;
+}
+
+.swiper-container .swiper-buttons .swiper-button-prev,
+.swiper-container .swiper-buttons .swiper-button-next {
+  position: static;
+  width: 50px;
+  height: 50px;
+  background: url("../images/common/swiper-arrow.svg") center no-repeat;
+  margin-top: 0;
+}
+
+.swiper-container .swiper-buttons .swiper-button-prev::after,
+.swiper-container .swiper-buttons .swiper-button-next::after {
+  display: none;
+}
+
+.swiper-container .swiper-buttons .swiper-button-prev {
+  margin-right: 10px;
+}
+
+.swiper-container .swiper-buttons .swiper-button-next {
+  transform: rotate(180deg);
+}
+
+.swiper-container .swiper-controls {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.swiper-container .swiper-controls .swiper-buttons {
+  margin-right: 50px;
+}
+
+.swiper-container .swiper-controls .swiper-pagination {
+  margin-top: 0;
 }
 
 .sandbox {
@@ -156,7 +204,7 @@ h6 {
 
 .course-tile {
   padding: 40px;
-  background: #fff;
+  background: #ffffff;
   border-radius: 3px;
   filter: drop-shadow(0px 2px 14px rgba(7, 10, 36, 0.15));
   display: flex;
@@ -276,7 +324,7 @@ h6 {
   max-width: 100%;
   background: #33A4D5;
   border-radius: 3px;
-  color: #fff;
+  color: #ffffff;
   height: 54px;
   font-weight: 500;
   font-size: 13px;
@@ -287,7 +335,7 @@ h6 {
 
 .button:not(.button_disabled):hover {
   background: #2792C9;
-  color: #fff;
+  color: #ffffff;
 }
 
 .button:not(.button_disabled):active {
@@ -445,6 +493,37 @@ h6 {
   color: #3d4c68;
 }
 
+.review_slide {
+  position: relative;
+}
+
+.review_slide::after {
+  display: none;
+}
+
+.review_slide .review__top {
+  padding-top: 16px;
+  padding-left: 264px;
+}
+
+.review_slide .review__photo {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: 186px;
+  height: 186px;
+  padding: 10px;
+  background: #ffffff;
+  margin-right: 0;
+}
+
+.review_slide .review__text {
+  background: #ffffff;
+  padding: 30px 55px 40px 264px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+}
+
 .header {
   background: #051127;
   padding-top: 30px;
@@ -496,7 +575,7 @@ h6 {
   line-height: 20px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #fff;
+  color: #ffffff;
 }
 
 .header__link_courses::before {
@@ -512,7 +591,7 @@ h6 {
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
-  color: #fff;
+  color: #ffffff;
   text-decoration: underline;
 }
 
@@ -549,7 +628,7 @@ h6 {
   top: 0;
   left: 0;
   right: 0;
-  background: #fff;
+  background: #ffffff;
   z-index: 10;
 }
 
@@ -565,7 +644,7 @@ h6 {
 }
 
 .courses-menu__inner {
-  background: #fff;
+  background: #ffffff;
 }
 
 .courses-menu__head {
@@ -580,7 +659,7 @@ h6 {
 .courses-menu__left {
   position: relative;
   background: #3d4c68;
-  color: #fff;
+  color: #ffffff;
 }
 
 .courses-menu__title {
@@ -621,7 +700,7 @@ h6 {
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
-  color: #fff;
+  color: #ffffff;
 }
 
 .courses-menu__level_calendar {
@@ -815,7 +894,7 @@ h6 {
   border-radius: 3px;
   padding: 0 20px;
   background: #3d4c68;
-  color: #fff;
+  color: #ffffff;
   font-weight: 600;
   font-size: 16px;
   line-height: 30px;
@@ -829,12 +908,12 @@ h6 {
 .banner__inner {
   padding: 60px 0;
   background: rgba(10, 37, 85, 0.6);
-  color: #fff;
+  color: #ffffff;
 }
 
 .banner__title {
   position: relative;
-  color: #fff;
+  color: #ffffff;
   padding-bottom: 23px;
 }
 
@@ -931,7 +1010,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #fff;
+  border: 1px solid #ffffff;
   border-radius: 3px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -1103,7 +1182,7 @@ h6 {
 .stages__icon {
   height: 100%;
   flex-shrink: 0;
-  background: #fff;
+  background: #ffffff;
 }
 
 .stages__icon img {
@@ -1141,7 +1220,7 @@ h6 {
 }
 
 .benefit__hero {
-  background: #fff;
+  background: #ffffff;
   box-shadow: 0px -80px 50px rgba(17, 33, 62, 0.15);
   border-radius: 3px;
   padding: 52px 50px 0;
@@ -1184,7 +1263,7 @@ h6 {
 .benefit__tile {
   position: relative;
   z-index: 1;
-  background: #fff;
+  background: #ffffff;
   box-shadow: 0 5px 20px rgba(17, 33, 62, 0.15);
   border-radius: 3px;
   padding: 45px 45px 0;
@@ -1388,7 +1467,7 @@ h6 {
 }
 
 .faq__tab.active {
-  background: #fff;
+  background: #ffffff;
   color: #0A2555;
   font-weight: 700;
 }
@@ -1476,6 +1555,25 @@ h6 {
   margin-top: 20px;
 }
 
+.review-slider {
+  padding: 80px 0 60px;
+  background: radial-gradient(32.43% 73.89% at 50% 50%, rgba(10, 37, 85, 0.35) 0%, rgba(10, 37, 85, 0.5) 100%), url("../images/review-slider/bg.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.review-slider__title {
+  color: #ffffff;
+}
+
+.review-slider__slider {
+  margin-top: 50px;
+  overflow: visible;
+}
+
+.review-slider__slide {
+  width: 950px;
+}
+
 @media screen and (min-width: 576px) {
   .course-tile__prices_phone {
     display: none;
@@ -1498,7 +1596,7 @@ h6 {
 
   .benefit__tile:hover .benefit__name,
   .benefit__tile:hover .benefit__caption {
-    color: #fff;
+    color: #ffffff;
   }
 }
 
@@ -1515,6 +1613,12 @@ h6 {
     display: none;
   }
 
+  .review_slide .review__name,
+  .review_slide .review__age,
+  .review_slide .review__position {
+    color: #ffffff;
+  }
+
   .benefit__tile_vertical {
     grid-row: span 2;
   }
@@ -1527,7 +1631,7 @@ h6 {
 @media screen and (min-width: 1200px) {
   .calendar__day_has-event:hover {
     background: #3d4c68;
-    color: #fff;
+    color: #ffffff;
     cursor: pointer;
     transform: scale(1.1);
     box-shadow: 0 4px 15px rgba(61, 76, 104, 0.4);
@@ -1583,7 +1687,7 @@ h6 {
 
   .calendar__day_active {
     background: #33A4D5;
-    color: #fff;
+    color: #ffffff;
   }
 
   .calendar__day-content {
@@ -1619,11 +1723,24 @@ h6 {
     left: 15px;
     right: 15px;
   }
+
+  .review-slider__slide {
+    width: 800px;
+  }
 }
 
 @media screen and (max-width: 991.98px) {
   .swiper-container .swiper-pagination {
     margin-top: 20px;
+  }
+
+  .swiper-container .swiper-controls {
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .swiper-container .swiper-controls .swiper-buttons {
+    display: none;
   }
 
   .sandbox_benefit .sandbox__block {
@@ -1742,6 +1859,23 @@ h6 {
     margin-top: 10px;
     font-size: 14px;
     line-height: 20px;
+  }
+
+  .review_slide .review__top {
+    padding-left: 174px;
+    padding-top: 10px;
+  }
+
+  .review_slide .review__photo {
+    width: 130px;
+    height: 130px;
+    padding: 5px;
+    left: 15px;
+  }
+
+  .review_slide .review__text {
+    padding: 23px 30px 30px 174px;
+    margin-top: 20px;
   }
 
   .header {
@@ -2082,6 +2216,18 @@ h6 {
     font-size: 14px;
     line-height: 20px;
   }
+
+  .review-slider {
+    padding: 40px 0 50px;
+  }
+
+  .review-slider__slider {
+    margin-top: 30px;
+  }
+
+  .review-slider__slide {
+    width: 560px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -2122,6 +2268,32 @@ h6 {
     margin-top: 0;
     font-size: 12px;
     line-height: 18px;
+  }
+
+  .review_slide {
+    background: #ffffff;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    padding: 15px 15px 40px;
+  }
+
+  .review_slide .review__top {
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  .review_slide .review__photo {
+    position: static;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    margin-right: 15px;
+  }
+
+  .review_slide .review__text {
+    padding: 0;
+    background: unset;
+    box-shadow: none;
   }
 
   .header {
@@ -2360,6 +2532,18 @@ h6 {
   .become-master__description {
     display: none;
   }
+
+  .review-slider {
+    padding-bottom: 40px;
+  }
+
+  .review-slider__slider {
+    margin-top: 26px;
+  }
+
+  .review-slider__slide {
+    width: 420px;
+  }
 }
 
 @media screen and (max-width: 575.98px) {
@@ -2406,5 +2590,9 @@ h6 {
 
   .benefit__caption {
     margin-top: 5px;
+  }
+
+  .review-slider__slide {
+    width: 242px;
   }
 }
