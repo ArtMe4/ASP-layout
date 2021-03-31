@@ -1,0 +1,33 @@
+@@include('common/header.html')
+
+<div class="sandbox">
+
+    <div class="become-master container">
+        <div class="row">
+            <div class="col-xl-7 col-lg-10 col-md-8">
+                <div class="title">Стань опытным мастером по пошиву свадебного платья</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-10">
+                <div class="become-master__grid">
+                    @@for (var i = 0; i < 3; i++) {
+                        <div class="become-master__item">
+                            <div class="become-master__photo">
+                                <img src="images/become-master/photo.jpg" alt="">
+                            </div>
+                            <div class="become-master__caption">Поддержка студентов в закрытом чате</div>
+                            <div class="become-master__description">
+                                Консультация студентов по любому вопросу в специальном закрытом чате
+                            </div>
+                        </div>
+                    }
+                </div>
+                <a href="#" class="become-master__button button">Выбрать курс</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@@include('common/footer.html')

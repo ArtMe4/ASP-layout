@@ -181,7 +181,7 @@ h6 {
   font-weight: 500;
   font-size: 26px;
   line-height: 34px;
-  color: #085F97;
+  color: #085f97;
 }
 
 .course-tile__info {
@@ -248,7 +248,7 @@ h6 {
 
 .course-tile__price_old {
   margin-left: 12px;
-  color: #085F97;
+  color: #085f97;
   font-size: 18px;
   line-height: 22px;
   transform: translateY(-4px);
@@ -355,7 +355,7 @@ h6 {
   font-weight: 600;
   font-size: 40px;
   line-height: 52px;
-  color: #085F97;
+  color: #085f97;
 }
 
 .title_small {
@@ -731,7 +731,7 @@ h6 {
   font-size: 20px;
   line-height: 28px;
   text-transform: uppercase;
-  color: #085F97;
+  color: #085f97;
 }
 
 .calendar__component {
@@ -746,7 +746,7 @@ h6 {
   font-size: 12px;
   line-height: 18px;
   text-transform: uppercase;
-  color: #085F97;
+  color: #085f97;
   margin-bottom: 20px;
 }
 
@@ -1022,7 +1022,7 @@ h6 {
   right: 0;
   bottom: 0;
   height: 2px;
-  background: #085F97;
+  background: #085f97;
   transform-origin: left;
   transition: transform ease-in-out 700ms;
   transform: scaleX(0);
@@ -1047,7 +1047,7 @@ h6 {
   right: 0;
   bottom: -198px;
   height: 198px;
-  background: #085F97;
+  background: #085f97;
   transform-origin: top;
   transition: transform ease-in-out 350ms;
   transform: scaleY(0);
@@ -1060,7 +1060,7 @@ h6 {
   left: -100px;
   bottom: -198px;
   height: 198px;
-  background: #085F97;
+  background: #085f97;
   transform-origin: top;
   transition: transform ease-in-out 350ms;
   transform: scaleY(0);
@@ -1244,7 +1244,7 @@ h6 {
   font-weight: 500;
   font-size: 26px;
   line-height: 34px;
-  color: #085F97;
+  color: #085f97;
   transition: all ease-in-out 0.7s;
 }
 
@@ -1414,7 +1414,7 @@ h6 {
 }
 
 .faq__question-wrap::-webkit-scrollbar-thumb {
-  background: #085F97;
+  background: #085f97;
 }
 
 .faq__question {
@@ -1422,7 +1422,7 @@ h6 {
   font-weight: 600;
   font-size: 24px;
   line-height: 34px;
-  color: #085F97;
+  color: #085f97;
 }
 
 .faq__text {
@@ -1434,6 +1434,46 @@ h6 {
 
 .faq__button {
   margin-top: 30px;
+}
+
+.become-master__grid {
+  margin-top: 60px;
+  display: grid;
+  grid-gap: 54px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.become-master__photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: translateX(-10px);
+}
+
+.become-master__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.become-master__caption {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  color: #085f97;
+}
+
+.become-master__description {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #3d4c68;
+}
+
+.become-master__button {
+  margin-top: 20px;
 }
 
 @media screen and (min-width: 576px) {
@@ -2020,6 +2060,28 @@ h6 {
     font-size: 14px;
     line-height: 20px;
   }
+
+  .become-master__grid {
+    margin-top: 38px;
+    grid-gap: 40px;
+  }
+
+  .become-master__photo {
+    width: 80px;
+    height: 80px;
+    transform: unset;
+  }
+
+  .become-master__caption {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .become-master__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -2265,6 +2327,38 @@ h6 {
   .welcome__title::after {
     top: 0;
     right: 0;
+  }
+
+  .become-master__grid {
+    display: flex;
+    overflow-x: auto;
+    grid-gap: unset;
+  }
+
+  .become-master__item {
+    width: 126px;
+    flex-shrink: 0;
+  }
+
+  .become-master__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .become-master__photo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .become-master__caption {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    color: #3d4c68;
+  }
+
+  .become-master__description {
+    display: none;
   }
 }
 
