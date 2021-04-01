@@ -1,0 +1,56 @@
+@@include('common/header.html')
+
+<div class="sandbox sandbox_homepage-hero">
+
+    <div class="homepage-hero">
+        <div class="homepage-hero__content container">
+            <div class="homepage-hero__title">Академия свадебных платьев</div>
+            <div class="homepage-hero__subtitle">Юлии Трофимовой</div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-11">
+                    <div class="position-relative">
+                        <div class="homepage-hero__slider swiper-container">
+                            <div class="swiper-wrapper">
+
+                                @@for (var i = 0; i < 3; i++) {
+
+                                <div class="swiper-slide">
+                                    <div class="course-tile course-tile_slide">
+                                        <div class="course-tile__image-wrap">
+                                            <img src="images/course-tile/image.png" class="course-tile__image" alt="">
+                                        </div>
+                                        <div class="course-tile__info">
+                                            <div class="course-tile__contains">
+                                                Видеокурс 51 урок, 44 часа, 25,5 гб
+                                            </div>
+                                            <div class="course-tile__title">Свадебный наряд моей дочери</div>
+                                        </div>
+                                        <div class="course-tile__right">
+                                            <div class="course-tile__prices">
+                                                <div class="course-tile__price course-tile__price_old">25 600 ₽</div>
+                                                <div class="course-tile__price">20 400 ₽</div>
+                                            </div>
+                                            <div class="course-tile__conditions d-none d-md-block">до 15 декабря 2020</div>
+                                            <a href="#" class="course-tile__btn button">подробнее</a>
+                                            <div class="course-tile__conditions d-md-none">
+                                                Акция действует до 15 декабря 2020 года
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                }
+
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@@include('common/footer.html')

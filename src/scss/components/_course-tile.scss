@@ -70,7 +70,7 @@
 
   &__info {
 
-    width: 100%;
+    width: 200%;
     margin-right: 45px;
 
     @include desktop {
@@ -162,6 +162,7 @@
 
     display: flex;
     align-items: flex-end;
+    white-space: nowrap;
 
     &_tablet {
 
@@ -244,6 +245,177 @@
 
       @include laptop-min {
         display: none;
+      }
+
+    }
+
+  }
+
+
+  //for slider
+
+  &_slide {
+
+    background: rgba(5, 17, 39, .5);
+    filter: none;
+    padding: 35px;
+
+    @include laptop {
+      padding: 20px 30px 30px;
+    }
+
+    @include tablet {
+      background: linear-gradient(180deg, rgba(5, 17, 39, 0.5) 0%, #273248 42.74%);
+      flex-direction: column;
+      padding: 0 30px 115px;
+    }
+
+    .course-tile {
+
+      &__image-wrap {
+
+        margin-top: -60px;
+        width: 260px;
+        margin-right: 20px;
+
+        @include desktop {
+          margin-top: 0;
+          width: 180px;
+        }
+
+        @include laptop {
+          width: 135px;
+        }
+
+        @include tablet {
+          margin-top: -60px;
+          width: 174px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        @include phone {
+          display: block;
+        }
+
+      }
+
+      &__title {
+
+        color: $white;
+
+        @include laptop {
+          font-size: 18px;
+          line-height: 26px;
+        }
+
+      }
+
+      &__contains {
+
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #D6E1F0;
+
+        @include laptop {
+          margin-bottom: 15px;
+        }
+
+        @include tablet {
+          margin-top: 20px;
+          margin-bottom: 5px;
+          display: block;
+        }
+
+      }
+
+      &__prices {
+
+        margin-top: -5px;
+
+        @include tablet {
+          margin-top: 10px;
+          justify-content: center;
+        }
+
+      }
+
+      &__price {
+
+        color: $white;
+        order: 1;
+
+        @include laptop {
+          font-size: 18px;
+          line-height: 26px;
+          font-weight: 500;
+        }
+
+        &_old {
+
+          color: #33A4D5;
+          order: 0;
+          margin-left: 0;
+          margin-right: 12px;
+
+          @include laptop {
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 500;
+            margin-right: 8px;
+            transform: translateY(-2px);
+          }
+
+        }
+
+      }
+
+      &__info {
+
+        @include tablet {
+          width: 100%;
+          text-align: center;
+        }
+
+      }
+
+      &__right {
+
+        @include laptop {
+          display: block;
+        }
+
+      }
+
+      &__conditions {
+
+        color: #D6E1F0;
+
+        @include laptop {
+          font-size: 13px;
+          line-height: 18px;
+        }
+
+        @include tablet {
+          margin-top: 15px;
+          text-align: center;
+          font-size: 12px;
+          line-height: 17px;
+        }
+
+      }
+
+      &__btn {
+
+        @include tablet {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        @include phone {
+          width: 100%;
+        }
+
       }
 
     }

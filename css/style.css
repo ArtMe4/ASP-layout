@@ -164,6 +164,10 @@ h6 {
   margin-top: 0;
 }
 
+.position-relative {
+  position: relative;
+}
+
 .sandbox {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -202,6 +206,10 @@ h6 {
   background: #0A2555;
 }
 
+.sandbox_homepage-hero {
+  padding-top: 0;
+}
+
 .course-tile {
   padding: 40px;
   background: #ffffff;
@@ -233,7 +241,7 @@ h6 {
 }
 
 .course-tile__info {
-  width: 100%;
+  width: 200%;
   margin-right: 45px;
 }
 
@@ -279,6 +287,7 @@ h6 {
 .course-tile__prices {
   display: flex;
   align-items: flex-end;
+  white-space: nowrap;
 }
 
 .course-tile__prices_tablet {
@@ -313,6 +322,48 @@ h6 {
 
 .course-tile__btn {
   margin-top: 15px;
+}
+
+.course-tile_slide {
+  background: rgba(5, 17, 39, 0.5);
+  filter: none;
+  padding: 35px;
+}
+
+.course-tile_slide .course-tile__image-wrap {
+  margin-top: -60px;
+  width: 260px;
+  margin-right: 20px;
+}
+
+.course-tile_slide .course-tile__title {
+  color: #ffffff;
+}
+
+.course-tile_slide .course-tile__contains {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #D6E1F0;
+}
+
+.course-tile_slide .course-tile__prices {
+  margin-top: -5px;
+}
+
+.course-tile_slide .course-tile__price {
+  color: #ffffff;
+  order: 1;
+}
+
+.course-tile_slide .course-tile__price_old {
+  color: #33A4D5;
+  order: 0;
+  margin-left: 0;
+  margin-right: 12px;
+}
+
+.course-tile_slide .course-tile__conditions {
+  color: #D6E1F0;
 }
 
 .button {
@@ -1652,6 +1703,78 @@ h6 {
   max-width: 262px;
 }
 
+.homepage-hero {
+  height: 1000px;
+  background: url("../images/homepage-hero/bg-overlay.png") top, url("../images/homepage-hero/bg-photo.png") top;
+  background-size: cover;
+  display: flex;
+  padding-bottom: 176px;
+}
+
+.homepage-hero__content {
+  margin-top: auto;
+}
+
+.homepage-hero__title,
+.homepage-hero__subtitle {
+  color: #ffffff;
+  text-align: center;
+}
+
+.homepage-hero__title {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.homepage-hero__subtitle {
+  margin-top: 5px;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 74px;
+}
+
+.homepage-hero__slider {
+  margin-top: 35px;
+  padding-top: 25px;
+}
+
+.homepage-hero .swiper-button-prev,
+.homepage-hero .swiper-button-next {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #051127;
+  top: calc(50% - 25px);
+  margin-top: 0;
+  transform: translateY(12px);
+}
+
+.homepage-hero .swiper-button-prev:focus,
+.homepage-hero .swiper-button-next:focus {
+  outline: none;
+}
+
+.homepage-hero .swiper-button-prev::after,
+.homepage-hero .swiper-button-next::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: url("../images/common/arrow.svg") center no-repeat;
+  background-size: contain;
+}
+
+.homepage-hero .swiper-button-prev {
+  left: -25px;
+}
+
+.homepage-hero .swiper-button-next {
+  right: -25px;
+}
+
+.homepage-hero .swiper-button-next::after {
+  transform: rotate(180deg);
+}
+
 @media screen and (min-width: 576px) {
   .course-tile__prices_phone {
     display: none;
@@ -1736,6 +1859,11 @@ h6 {
 
   .course-tile__info {
     margin-right: 30px;
+  }
+
+  .course-tile_slide .course-tile__image-wrap {
+    margin-top: 0;
+    width: 180px;
   }
 
   .button {
@@ -1883,6 +2011,46 @@ h6 {
 
   .course-tile__btn {
     margin-top: 10px;
+  }
+
+  .course-tile_slide {
+    padding: 20px 30px 30px;
+  }
+
+  .course-tile_slide .course-tile__image-wrap {
+    width: 135px;
+  }
+
+  .course-tile_slide .course-tile__title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .course-tile_slide .course-tile__contains {
+    margin-bottom: 15px;
+  }
+
+  .course-tile_slide .course-tile__price {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+  }
+
+  .course-tile_slide .course-tile__price_old {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    margin-right: 8px;
+    transform: translateY(-2px);
+  }
+
+  .course-tile_slide .course-tile__right {
+    display: block;
+  }
+
+  .course-tile_slide .course-tile__conditions {
+    font-size: 13px;
+    line-height: 18px;
   }
 
   .button {
@@ -2362,11 +2530,73 @@ h6 {
     margin-top: 15px;
     max-width: 172px;
   }
+
+  .homepage-hero {
+    height: 550px;
+    padding-bottom: 90px;
+  }
+
+  .homepage-hero__title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .homepage-hero__subtitle {
+    margin-top: 0;
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  .homepage-hero__slider {
+    margin-top: 30px;
+    padding-top: 0;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
   .sandbox_benefit .sandbox__block {
     display: none;
+  }
+
+  .course-tile_slide {
+    background: linear-gradient(180deg, rgba(5, 17, 39, 0.5) 0%, #273248 42.74%);
+    flex-direction: column;
+    padding: 0 30px 115px;
+  }
+
+  .course-tile_slide .course-tile__image-wrap {
+    margin-top: -60px;
+    width: 174px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .course-tile_slide .course-tile__contains {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  .course-tile_slide .course-tile__prices {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .course-tile_slide .course-tile__info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .course-tile_slide .course-tile__conditions {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  .course-tile_slide .course-tile__btn {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .review::after {
@@ -2706,6 +2936,36 @@ h6 {
   .course-hero__buy {
     margin-top: 10px;
   }
+
+  .homepage-hero {
+    height: auto;
+    padding-bottom: 0;
+    background-size: auto 640px;
+    background-repeat: no-repeat;
+  }
+
+  .homepage-hero__content {
+    margin-top: 310px;
+  }
+
+  .homepage-hero__slider {
+    padding-top: 60px;
+  }
+
+  .homepage-hero .swiper-button-prev,
+  .homepage-hero .swiper-button-next {
+    bottom: 40px;
+    top: unset;
+    transform: none;
+  }
+
+  .homepage-hero .swiper-button-prev {
+    left: calc(50% - 55px);
+  }
+
+  .homepage-hero .swiper-button-next {
+    right: calc(50% - 55px);
+  }
 }
 
 @media screen and (max-width: 575.98px) {
@@ -2719,6 +2979,14 @@ h6 {
 
   .course-tile__btn {
     margin-top: 4px;
+  }
+
+  .course-tile_slide .course-tile__image-wrap {
+    display: block;
+  }
+
+  .course-tile_slide .course-tile__btn {
+    width: 100%;
   }
 
   .benefit__grid {
