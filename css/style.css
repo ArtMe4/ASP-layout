@@ -203,7 +203,7 @@ h6 {
 
 .sandbox_benefit .sandbox__block {
   height: 500px;
-  background: #0A2555;
+  background: #0a2555;
 }
 
 .sandbox_homepage-hero {
@@ -276,7 +276,7 @@ h6 {
   font-weight: 600;
   font-size: 17px;
   line-height: 22px;
-  color: #0A2555;
+  color: #0a2555;
   margin-right: 5px;
 }
 
@@ -296,7 +296,7 @@ h6 {
 }
 
 .course-tile__price {
-  color: #0A2555;
+  color: #0a2555;
   font-weight: 600;
   font-size: 28px;
   line-height: 36px;
@@ -509,7 +509,7 @@ h6 {
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
-  color: #0A2555;
+  color: #0a2555;
 }
 
 .review__age {
@@ -527,7 +527,7 @@ h6 {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  color: #0A2555;
+  color: #0a2555;
 }
 
 .review__date {
@@ -602,7 +602,7 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 3px;
-  background: #0A2555;
+  background: #0a2555;
 }
 
 .header_transparent .header__mobile-toggle {
@@ -1086,7 +1086,7 @@ h6 {
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
-  color: #0A2555;
+  color: #0a2555;
 }
 
 .examples__sliders {
@@ -1263,7 +1263,7 @@ h6 {
   font-weight: 600;
   font-size: 18px;
   line-height: 26px;
-  color: #0A2555;
+  color: #0a2555;
 }
 
 .benefit {
@@ -1300,7 +1300,7 @@ h6 {
   font-size: 20px;
   line-height: 30px;
   text-align: center;
-  color: #0A2555;
+  color: #0a2555;
 }
 
 .benefit__grid {
@@ -1365,7 +1365,7 @@ h6 {
   right: 0;
   top: 0;
   bottom: 0;
-  background: #0A2555;
+  background: #0a2555;
   opacity: 0;
   transition: all ease-in-out 0.7s;
 }
@@ -1412,7 +1412,7 @@ h6 {
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
-  color: #0A2555;
+  color: #0a2555;
 }
 
 .welcome__text {
@@ -1519,7 +1519,7 @@ h6 {
 
 .faq__tab.active {
   background: #ffffff;
-  color: #0A2555;
+  color: #0a2555;
   font-weight: 700;
 }
 
@@ -1676,7 +1676,7 @@ h6 {
   font-size: 42px;
   font-weight: 600;
   line-height: 26px;
-  color: #0A2555;
+  color: #0a2555;
 }
 
 .course-hero__price_old {
@@ -1773,6 +1773,75 @@ h6 {
 
 .homepage-hero .swiper-button-next::after {
   transform: rotate(180deg);
+}
+
+.dresses-types {
+  overflow: hidden;
+  background: #0a2555;
+  padding-bottom: 40px;
+}
+
+.dresses-types__title {
+  position: relative;
+  z-index: 1;
+}
+
+.dresses-types__title::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  background: #ffffff;
+  top: 0;
+  left: -50vw;
+  right: -100vw;
+  bottom: -20px;
+}
+
+.dresses-types__tabs {
+  margin-top: 60px;
+  list-style: none;
+  padding: 0 30px 0 0;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.dresses-types__type {
+  display: inline-flex;
+  font-family: "Montserrat";
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.dresses-types__type.active {
+  font-weight: 700;
+}
+
+.dresses-types__slider-col {
+  position: relative;
+  z-index: 1;
+  clip-path: inset(-100vw -100vw -100vw 12px);
+}
+
+.dresses-types__slider {
+  overflow: visible;
+}
+
+.dresses-types__slider .swiper-wrapper {
+  height: 340px;
+}
+
+.dresses-types__slide {
+  background: #ffffff;
+  padding: 20px;
+  width: auto;
+}
+
+.dresses-types__slide img {
+  height: 100%;
+  width: auto;
 }
 
 @media screen and (min-width: 576px) {
@@ -2551,6 +2620,32 @@ h6 {
     margin-top: 30px;
     padding-top: 0;
   }
+
+  .dresses-types__tabs {
+    margin-top: 50px;
+  }
+
+  .dresses-types__type {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 15px;
+  }
+
+  .dresses-types__slider-col {
+    clip-path: none;
+  }
+
+  .dresses-types__slider .swiper-wrapper {
+    height: 260px;
+  }
+
+  .dresses-types__slider .swiper-controls {
+    justify-content: start;
+  }
+
+  .dresses-types__slide {
+    padding: 10px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -2965,6 +3060,56 @@ h6 {
 
   .homepage-hero .swiper-button-next {
     right: calc(50% - 55px);
+  }
+
+  .dresses-types {
+    background: #ffffff;
+    padding-bottom: 30px;
+    position: relative;
+  }
+
+  .dresses-types::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 184px;
+    background: #0a2555;
+  }
+
+  .dresses-types__title::before {
+    display: none;
+  }
+
+  .dresses-types__tabs {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dresses-types__type {
+    color: #3d4c68;
+    font-family: "Gilroy";
+    text-decoration: underline;
+    text-align: center;
+  }
+
+  .dresses-types__type.active {
+    text-decoration: none;
+  }
+
+  .dresses-types__slider {
+    margin-top: 10px;
+  }
+
+  .dresses-types__slider .swiper-wrapper {
+    height: 170px;
+  }
+
+  .dresses-types__slider .swiper-controls {
+    justify-content: center;
   }
 }
 

@@ -1,0 +1,170 @@
+.dresses-types {
+
+  overflow: hidden;
+  background: $dark-blue;
+  padding-bottom: 40px;
+
+  @include tablet {
+
+    background: $white;
+    padding-bottom: 30px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 184px;
+      background: $dark-blue;
+    }
+
+  }
+
+  &__title {
+
+    position: relative;
+    z-index: 1;
+
+    &::before {
+
+      content: "";
+      z-index: -1;
+      position: absolute;
+      background: $white;
+      top: 0;
+      left: -50vw;
+      right: -100vw;
+      bottom: -20px;
+
+      @include tablet {
+        display: none;
+      }
+
+    }
+
+  }
+
+  &__tabs {
+
+    margin-top: 60px;
+    list-style: none;
+    padding: 0 30px 0 0;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+
+    @include laptop {
+      margin-top: 50px;
+    }
+
+    @include tablet {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+  }
+
+  &__type {
+
+    display: inline-flex;
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 30px;
+    color: $white;
+    margin-bottom: 10px;
+
+    @include laptop {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 15px;
+    }
+
+    @include tablet {
+      color: $dark-gray;
+      font-family: "Gilroy";
+      text-decoration: underline;
+      text-align: center;
+    }
+
+    &.active {
+
+      font-weight: 700;
+
+      @include tablet {
+        text-decoration: none;
+      }
+
+    }
+
+  }
+
+  &__slider-col {
+
+    position: relative;
+    z-index: 1;
+    clip-path: inset( -100vw -100vw -100vw 12px );
+
+    @include laptop {
+      clip-path: none;
+    }
+
+  }
+
+  &__slider {
+
+    overflow: visible;
+
+    @include tablet {
+      margin-top: 10px;
+    }
+
+    .swiper-wrapper {
+
+      height: 340px;
+
+      @include laptop {
+        height: 260px;
+      }
+
+      @include tablet {
+        height: 170px;
+      }
+
+    }
+
+    .swiper-controls {
+
+      @include laptop {
+        justify-content: start;
+      }
+
+      @include tablet {
+        justify-content: center;
+      }
+
+    }
+
+  }
+
+  &__slide {
+
+    background: $white;
+    padding: 20px;
+    width: auto;
+
+    @include laptop {
+      padding: 10px;
+    }
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+
+  }
+
+}
