@@ -1599,6 +1599,59 @@ h6 {
   color: #949BA4;
 }
 
+.course-hero__subtitle {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 34px;
+  color: #085f97;
+}
+
+.course-hero__description {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #3d4c68;
+}
+
+.course-hero__prices {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.course-hero__price {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #0A2555;
+}
+
+.course-hero__price_old {
+  font-size: 20px;
+  text-decoration: line-through;
+  color: #33A4D5 !important;
+  transform: translateY(7px);
+  margin-right: 12px;
+}
+
+.course-hero__conditions {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  color: #3d4c68;
+}
+
+.course-hero__buy {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 262px;
+}
+
 @media screen and (min-width: 576px) {
   .course-tile__prices_phone {
     display: none;
@@ -1751,6 +1804,10 @@ h6 {
 
   .review-slider__slide {
     width: 800px;
+  }
+
+  .course-hero__photo {
+    height: 292px;
   }
 }
 
@@ -2253,6 +2310,58 @@ h6 {
   .review-slider__slide {
     width: 560px;
   }
+
+  .course-hero__photo {
+    height: 214px;
+  }
+
+  .course-hero__right {
+    padding-left: 5px;
+  }
+
+  .course-hero__contains {
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  .course-hero__subtitle {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #3d4c68;
+  }
+
+  .course-hero__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .course-hero__prices {
+    margin-top: 30px;
+  }
+
+  .course-hero__price {
+    font-size: 24px;
+    color: #3d4c68;
+  }
+
+  .course-hero__price_old {
+    font-size: 14px;
+    transform: translateY(4px);
+    margin-right: 8px;
+  }
+
+  .course-hero__conditions {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+
+  .course-hero__buy {
+    margin-top: 15px;
+    max-width: 172px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -2569,6 +2678,34 @@ h6 {
   .review-slider__slide {
     width: 420px;
   }
+
+  .course-hero__photo {
+    height: auto;
+    background: unset;
+    margin-bottom: 30px;
+  }
+
+  .course-hero__contains {
+    line-height: 20px;
+  }
+
+  .course-hero__subtitle {
+    color: #085f97;
+  }
+
+  .course-hero__prices {
+    margin-top: 20px;
+  }
+
+  .course-hero__conditions {
+    font-size: 12px;
+    line-height: 17px;
+    font-weight: normal;
+  }
+
+  .course-hero__buy {
+    margin-top: 10px;
+  }
 }
 
 @media screen and (max-width: 575.98px) {
@@ -2619,5 +2756,9 @@ h6 {
 
   .review-slider__slide {
     width: 242px;
+  }
+
+  .course-hero__buy {
+    max-width: none;
   }
 }

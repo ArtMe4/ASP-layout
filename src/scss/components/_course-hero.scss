@@ -9,6 +9,20 @@
     align-items: center;
     justify-content: center;
 
+    @include desktop {
+      height: 292px;
+    }
+
+    @include laptop {
+      height: 214px;
+    }
+
+    @include tablet {
+      height: auto;
+      background: unset;
+      margin-bottom: 30px;
+    }
+
     img {
       max-width: 100%;
       max-height: 100%;
@@ -17,14 +31,159 @@
   }
 
   &__right {
+
     padding-left: 26px;
+
+    @include laptop {
+      padding-left: 5px;
+    }
+
   }
 
   &__contains {
+
     margin-top: 10px;
     font-size: 15px;
     line-height: 26px;
     color: #949BA4;
+
+    @include laptop {
+      font-size: 13px;
+      line-height: 24px;
+    }
+
+    @include tablet {
+      line-height: 20px;
+    }
+
+  }
+
+  &__subtitle {
+
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 34px;
+    color: $blue;
+
+    @include laptop {
+      margin-top: 10px;
+      font-size: 16px;
+      line-height: 20px;
+      color: $dark-gray;
+    }
+
+    @include tablet {
+      color: $blue;
+    }
+
+  }
+
+  &__description {
+
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 26px;
+    color: $dark-gray;
+
+    @include laptop {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+  }
+
+  &__prices {
+
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    @include laptop {
+      margin-top: 30px;
+    }
+
+    @include tablet {
+      margin-top: 20px;
+    }
+
+  }
+
+  &__price {
+
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 26px;
+    color: $dark-blue;
+
+    @include laptop {
+      font-size: 24px;
+      color: $dark-gray;
+    }
+
+    &_old {
+
+      font-size: 20px;
+      text-decoration: line-through;
+      color: #33A4D5 !important;
+      transform: translateY(7px);
+      margin-right: 12px;
+
+      @include laptop {
+        font-size: 14px;
+        transform: translateY(4px);
+        margin-right: 8px;
+      }
+
+    }
+
+  }
+
+  &__conditions {
+
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+    color: $dark-gray;
+
+    @include laptop {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+    }
+
+    @include tablet {
+      font-size: 12px;
+      line-height: 17px;
+      font-weight: normal;
+    }
+
+  }
+
+  &__buy {
+
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 262px;
+
+    @include laptop {
+      margin-top: 15px;
+      max-width: 172px;
+    }
+
+    @include tablet {
+      margin-top: 10px;
+    }
+
+    @include phone {
+      max-width: none;
+    }
+
   }
 
 }
