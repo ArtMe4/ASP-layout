@@ -1,0 +1,38 @@
+@@include('common/header.html')
+
+<div class="container sandbox">
+    <div class="row">
+        <div class="col-lg-3 col-md-4">
+
+            <div class="section-filter">
+                <div class="section-filter__section">
+                    <div class="section-filter__title">Стоимость обучения</div>
+                    <div class="section-filter__radio radio">
+                        <div class="radio__item">
+                            <input type="radio" class="radio__input" name="price" value="price-payed"
+                                   id="filterPricePayed" checked>
+                            <label class="radio__label" for="filterPricePayed">Платно</label>
+                        </div>
+                        <div class="radio__item">
+                            <input type="radio" class="radio__input" name="price" value="price-free"
+                                   id="filterPriceFree">
+                            <label class="radio__label" for="filterPriceFree">Бесплатно</label>
+                        </div>
+                        <div class="radio__item">
+                            <input type="radio" class="radio__input" name="price" value="price-all"
+                                   id="filterPriceAll">
+                            <label class="radio__label" for="filterPriceAll">Любой</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-filter__section">
+                    <div class="section-filter__online">Онлайн</div>
+                    <div class="section-filter__online section-filter__online_active">Онлайн</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@@include('common/footer.html')

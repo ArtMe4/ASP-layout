@@ -1,0 +1,96 @@
+.section-filter {
+
+  &__section {
+
+    &:not(:last-child) {
+
+      margin-bottom: 30px;
+
+      @include laptop {
+        margin-bottom: 22px;
+      }
+
+    }
+
+  }
+
+  &__title {
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: $blue;
+    margin-bottom: 30px;
+
+    @include laptop {
+      margin-bottom: 22px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include tablet {
+      margin-bottom: 12px;
+    }
+
+  }
+
+  &__radio {
+
+    @include tablet {
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: -10px;
+
+      .radio__item {
+
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+
+      }
+
+    }
+
+  }
+
+  &__online {
+
+    font-size: 20px;
+    line-height: 30px;
+    color: $dark-gray;
+    display: flex;
+    align-items: center;
+
+    @include laptop {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &_active {
+
+      &::after {
+        transform: rotate(180deg);
+      }
+
+    }
+
+    &::after {
+
+      content: "";
+      margin-left: 10px;
+      width: 44px;
+      height: 20px;
+      background: url("../images/section-filter/online-off.svg") left no-repeat;
+      background-size: contain;
+
+      @include tablet {
+        margin-left: 5px;
+      }
+
+    }
+
+  }
+
+}

@@ -184,3 +184,91 @@ h6 {
 .position-relative {
   position: relative;
 }
+
+.radio, .checkbox {
+
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+  }
+
+  &__label {
+
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    line-height: 30px;
+    color: $dark-gray;
+    cursor: pointer;
+
+    @include laptop {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+    }
+
+    &::before {
+
+      content: "";
+      width: 24px;
+      height: 24px;
+      margin-right: 12px;
+      flex-shrink: 0;
+
+      @include laptop {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+      }
+
+      @include tablet {
+        margin-right: 5px;
+      }
+
+    }
+
+  }
+
+}
+
+.radio {
+
+  &__label {
+
+    &::before {
+      background: url("../images/common/radio-empty.svg") center no-repeat;
+      background-size: contain;
+    }
+
+  }
+
+  &__input {
+
+    display: none;
+
+    &:checked {
+
+      &+.radio {
+
+        &__label {
+
+          &::before {
+            background: url("../images/common/radio-checked.svg") center no-repeat;
+            background-size: contain;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
