@@ -68,4 +68,14 @@
     padding-top: 0;
   }
 
+  &_contacts {
+
+    padding-top: 200px;
+
+    @include laptop {
+      padding-top: 100px;
+    }
+
+  }
+
 }

@@ -1,0 +1,218 @@
+.contacts {
+
+  position: relative;
+  border: 1px solid #33A4D5;
+  color: $dark-gray;
+
+  @include laptop {
+    border-radius: 3px;
+  }
+
+  &::after {
+
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    right: -40px;
+    top: -40px;
+    bottom: 0;
+    width: 500px;
+    background: #D6E1F0;
+
+    @include desktop {
+      width: 450px;
+    }
+
+    @include laptop {
+      right: -20px;
+      top: -20px;
+      width: 316px;
+    }
+
+    @include tablet {
+      width: 294px;
+      height: 257px;
+      right: -16px;
+      bottom: 0;
+      top: unset;
+    }
+
+  }
+
+  &__content {
+
+    padding: 70px 0 62px 60px;
+
+    @include desktop {
+      padding-left: 30px;
+    }
+
+    @include laptop {
+      padding: 30px 0 54px 20px;
+    }
+
+    @include tablet {
+      padding: 30px 0 0;
+    }
+
+  }
+
+  &__status {
+
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    opacity: 0.7;
+
+    @include laptop {
+      font-weight: 400;
+    }
+
+  }
+
+  &__name {
+
+    margin-top: 10px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 34px;
+
+    @include laptop {
+      margin-top: 20px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @include tablet {
+      margin-top: 15px;
+    }
+
+  }
+
+  &__legal {
+
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+
+    @include laptop {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include tablet {
+      margin-top: 10px;
+    }
+
+  }
+
+  &__socials {
+
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 26px;
+
+    @include laptop {
+      grid-gap: 7px 20px;
+    }
+
+    @include tablet {
+      margin-top: 23px;
+    }
+
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    margin-right: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include laptop {
+      width: 30px;
+      height: 30px;
+    }
+
+    @include tablet {
+      width: 20px;
+      height: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+  }
+
+  &__link {
+
+    font-size: 18px;
+    line-height: 27px;
+    color: $dark-gray;
+
+    @include laptop {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include tablet {
+      font-weight: 500;
+    }
+
+    &_bold {
+
+      font-weight: 600;
+
+      @include tablet {
+        font-weight: 600;
+      }
+
+    }
+
+  }
+
+  &__photo {
+
+    position: absolute;
+    right: -40px;
+    bottom: 0;
+
+    @include desktop {
+      width: 500px;
+    }
+
+    @include laptop {
+      right: -20px;
+      width: 380px;
+    }
+
+    @include tablet {
+      margin-top: 35px;
+      margin-left: auto;
+      position: relative;
+      display: block;
+      right: -28px;
+      max-width: 100%;
+    }
+
+  }
+
+}
