@@ -1,0 +1,102 @@
+.section-menu {
+
+  padding-right: 20px;
+
+  &__item {
+
+    &:not(:last-child) {
+
+      margin-bottom: 15px;
+
+      @include laptop {
+        margin-bottom: 10px;
+      }
+
+    }
+
+    &_active {
+
+      position: relative;
+      padding-left: 35px;
+
+      @include laptop {
+        padding-left: 25px;
+      }
+
+      @include tablet {
+        padding-left: 0;
+      }
+
+      &::before {
+
+        content: "";
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: url("../images/section-menu/arrow.svg") center no-repeat;
+        background-size: contain;
+
+        @include laptop {
+          width: 20px;
+          height: 20px;
+        }
+
+        @include tablet {
+          display: none;
+        }
+
+      }
+
+      .section-menu {
+
+        &__link {
+          color: $blue;
+          font-weight: 600;
+        }
+
+      }
+
+    }
+
+  }
+
+  &__link {
+
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 30px;
+    color: $dark-gray;
+
+    @include laptop {
+      font-family: "Gilroy";
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &:hover {
+      color: $blue;
+    }
+
+  }
+
+  &__description {
+
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #949BA4;
+
+    @include laptop {
+      font-weight: 500;
+    }
+
+    @include tablet {
+      font-weight: 400;
+    }
+
+  }
+
+}

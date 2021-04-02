@@ -1844,6 +1844,53 @@ h6 {
   width: auto;
 }
 
+.section-menu {
+  padding-right: 20px;
+}
+
+.section-menu__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.section-menu__item_active {
+  position: relative;
+  padding-left: 35px;
+}
+
+.section-menu__item_active::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("../images/section-menu/arrow.svg") center no-repeat;
+  background-size: contain;
+}
+
+.section-menu__item_active .section-menu__link {
+  color: #085f97;
+  font-weight: 600;
+}
+
+.section-menu__link {
+  font-family: "Montserrat";
+  font-size: 20px;
+  line-height: 30px;
+  color: #3d4c68;
+}
+
+.section-menu__link:hover {
+  color: #085f97;
+}
+
+.section-menu__description {
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #949BA4;
+}
+
 @media screen and (min-width: 576px) {
   .course-tile__prices_phone {
     display: none;
@@ -2646,6 +2693,30 @@ h6 {
   .dresses-types__slide {
     padding: 10px;
   }
+
+  .section-menu__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .section-menu__item_active {
+    padding-left: 25px;
+  }
+
+  .section-menu__item_active::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .section-menu__link {
+    font-family: "Gilroy";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .section-menu__description {
+    font-weight: 500;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -3110,6 +3181,18 @@ h6 {
 
   .dresses-types__slider .swiper-controls {
     justify-content: center;
+  }
+
+  .section-menu__item_active {
+    padding-left: 0;
+  }
+
+  .section-menu__item_active::before {
+    display: none;
+  }
+
+  .section-menu__description {
+    font-weight: 400;
   }
 }
 
