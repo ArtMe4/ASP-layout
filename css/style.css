@@ -212,6 +212,23 @@ h6 {
   background-size: contain;
 }
 
+.jarallax {
+  position: relative;
+  z-index: 0;
+}
+
+.jarallax > .jarallax-img {
+  position: absolute;
+  object-fit: cover;
+  /* support for plugin https://github.com/bfred-it/object-fit-images */
+  font-family: 'object-fit: cover;';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 .sandbox {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -260,6 +277,11 @@ h6 {
 
 .sandbox_form {
   background: #3d4c68;
+}
+
+.sandbox_parallax {
+  padding-top: 80vh;
+  padding-bottom: 50vh;
 }
 
 .course-tile {
@@ -2269,6 +2291,46 @@ h6 {
   width: 234px;
 }
 
+.have-questions {
+  position: relative;
+  padding: 50px 0 70px;
+}
+
+.have-questions::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(10, 37, 85, 0.7);
+  z-index: -1;
+}
+
+.have-questions__title {
+  position: relative;
+  padding-bottom: 19px;
+  color: #ffffff;
+}
+
+.have-questions__title::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: url("../images/have-questions/decor.svg") left no-repeat;
+}
+
+.have-questions__description {
+  margin-top: 32px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
 @media screen and (min-width: 576px) {
   .course-tile__prices_phone {
     display: none;
@@ -3311,6 +3373,25 @@ h6 {
     order: 0;
     width: 100%;
   }
+
+  .have-questions {
+    padding: 50px 0;
+  }
+
+  .have-questions__title {
+    padding-bottom: 12px;
+  }
+
+  .have-questions__title::after {
+    max-width: 270px;
+    background-position: center;
+  }
+
+  .have-questions__description {
+    margin-top: 25px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -3897,6 +3978,26 @@ h6 {
   .form__fields {
     grid-template-columns: 1fr;
     grid-gap: 15px;
+  }
+
+  .have-questions {
+    padding: 40px 0 50px;
+  }
+
+  .have-questions__title {
+    text-align: center;
+  }
+
+  .have-questions__title::after {
+    max-width: none;
+  }
+
+  .have-questions__description {
+    text-align: center;
+  }
+
+  .have-questions__form {
+    margin-top: 30px;
   }
 }
 
