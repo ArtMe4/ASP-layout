@@ -2141,6 +2141,68 @@ h6 {
   max-width: 100%;
 }
 
+.knowledge__grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px 90px;
+}
+
+.knowledge__item {
+  position: relative;
+}
+
+.knowledge__item:first-child::after,
+.knowledge__item:last-child::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 112px;
+  width: calc(50vw + 75px);
+  height: 1px;
+  background: #D6E1F0;
+}
+
+.knowledge__item:first-child::after {
+  left: -50vw;
+}
+
+.knowledge__item:last-child::after {
+  left: 75px;
+}
+
+.knowledge__item:not(:nth-child(3n))::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 112px;
+  left: 75px;
+  width: calc(100% + 90px);
+  height: 3px;
+  background: url("../images/knowledge/decor.svg") center;
+}
+
+.knowledge__image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.knowledge__image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.knowledge__caption {
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #3d4c68;
+}
+
 @media screen and (min-width: 576px) {
   .course-tile__prices_phone {
     display: none;
@@ -3119,6 +3181,38 @@ h6 {
   .academy-numbers__photo {
     max-height: 323px;
   }
+
+  .knowledge__grid {
+    margin-top: 30px;
+    grid-column-gap: 20px;
+  }
+
+  .knowledge__item:first-child::after,
+  .knowledge__item:last-child::after {
+    top: 82px;
+    width: calc(50vw + 50px);
+  }
+
+  .knowledge__item:last-child::after {
+    left: 50px;
+  }
+
+  .knowledge__item:not(:nth-child(3n))::before {
+    top: 82px;
+    left: 50px;
+    width: calc(100% + 20px);
+  }
+
+  .knowledge__image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .knowledge__caption {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -3670,6 +3764,37 @@ h6 {
   .academy-numbers {
     display: none;
   }
+
+  .knowledge__grid {
+    margin-top: 30px;
+    grid-row-gap: 25px;
+  }
+
+  .knowledge__item:first-child::after,
+  .knowledge__item:last-child::after {
+    top: 50px;
+    width: calc(50vw + 35px);
+  }
+
+  .knowledge__item:last-child::after {
+    left: 35px;
+  }
+
+  .knowledge__item:not(:nth-child(3n))::before {
+    top: 50px;
+    left: 35px;
+  }
+
+  .knowledge__image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .knowledge__caption {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 @media screen and (max-width: 575.98px) {
@@ -3732,5 +3857,30 @@ h6 {
 
   .course-hero__buy {
     max-width: none;
+  }
+
+  .knowledge__grid {
+    margin-top: 20px;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+  }
+
+  .knowledge__item {
+    display: flex;
+    align-items: center;
+  }
+
+  .knowledge__item:first-child::after,
+  .knowledge__item:last-child::after {
+    display: none;
+  }
+
+  .knowledge__item:not(:nth-child(3n))::before {
+    display: none;
+  }
+
+  .knowledge__image {
+    flex-shrink: 0;
+    margin-right: 15px;
   }
 }

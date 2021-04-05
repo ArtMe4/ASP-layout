@@ -1,0 +1,27 @@
+@@include('common/header.html')
+
+<div class="sandbox">
+
+    <div class="knowledge container">
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="title title_small">Какие знания вы получите</div>
+                <div class="knowledge__grid">
+                    @@for (var i = 0; i < 6; i++) {
+                        <div class="knowledge__item">
+                            <div class="knowledge__image">
+                                <img src="images/knowledge/image.jpg" alt="">
+                            </div>
+                            <div class="knowledge__caption">
+                                Как организовать процесс работы и производства?
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@@include('common/footer.html')

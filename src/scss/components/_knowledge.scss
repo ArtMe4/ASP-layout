@@ -1,0 +1,179 @@
+.knowledge {
+
+  &__grid {
+
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px 90px;
+
+    @include laptop {
+      margin-top: 30px;
+      grid-column-gap: 20px;
+    }
+
+    @include tablet {
+      margin-top: 30px;
+      grid-row-gap: 25px;
+    }
+
+    @include phone {
+      margin-top: 20px;
+      grid-template-columns: 1fr;
+      grid-row-gap: 10px;
+    }
+
+  }
+
+  &__item {
+
+    position: relative;
+
+    @include phone {
+      display: flex;
+      align-items: center;
+    }
+
+    &:first-child, &:last-child {
+
+      &::after {
+
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: 112px;
+        width: calc(50vw + 75px);
+        height: 1px;
+        background: #D6E1F0;
+
+        @include laptop {
+          top: 82px;
+          width: calc(50vw + 50px);
+        }
+
+        @include tablet {
+          top: 50px;
+          width: calc(50vw + 35px);
+        }
+
+        @include phone {
+          display: none;
+        }
+
+      }
+
+    }
+
+    &:first-child {
+
+      &::after {
+        left: -50vw;
+      }
+
+    }
+
+    &:last-child {
+
+      &::after {
+
+        left: 75px;
+
+        @include laptop {
+          left: 50px;
+        }
+
+        @include tablet {
+          left: 35px;
+        }
+
+      }
+
+    }
+
+    &:not(:nth-child(3n)) {
+
+      &::before {
+
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: 112px;
+        left: 75px;
+        width: calc(100% + 90px);
+        height: 3px;
+        background: url("../images/knowledge/decor.svg") center;
+
+        @include laptop {
+          top: 82px;
+          left: 50px;
+          width: calc(100% + 20px);
+        }
+
+        @include tablet {
+          top: 50px;
+          left: 35px;
+        }
+
+        @include phone {
+          display: none;
+        }
+
+      }
+
+    }
+
+  }
+
+  &__image {
+
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include laptop {
+      width: 100px;
+      height: 100px;
+    }
+
+    @include tablet {
+      width: 70px;
+      height: 70px;
+    }
+
+    @include phone {
+      flex-shrink: 0;
+      margin-right: 15px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+  }
+
+  &__caption {
+
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: $dark-gray;
+
+    @include laptop {
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include tablet {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+  }
+
+}
