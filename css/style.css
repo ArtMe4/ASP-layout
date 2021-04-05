@@ -258,6 +258,10 @@ h6 {
   padding-top: 200px;
 }
 
+.sandbox_form {
+  background: #3d4c68;
+}
+
 .course-tile {
   padding: 40px;
   background: #ffffff;
@@ -2203,6 +2207,68 @@ h6 {
   color: #3d4c68;
 }
 
+.form__fields {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  grid-gap: 20px 25px;
+}
+
+.form__field {
+  height: 54px;
+  padding: 0 20px;
+  font-weight: 500;
+  font-size: 16px;
+  background: #ffffff;
+  color: #3d4c68;
+  font-family: "Gilroy";
+  border: none;
+  border-radius: 2px;
+  width: 100%;
+}
+
+.form__field::placeholder {
+  color: #3d4c68;
+}
+
+.form__field:focus {
+  outline: none;
+}
+
+.form__field_textarea {
+  grid-row: span 2;
+  height: 100%;
+  resize: none;
+  padding-top: 18px;
+}
+
+.form__bottom {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form__agreement {
+  margin-right: 40px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.form__agreement a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.form__agreement a:hover {
+  text-decoration: none;
+}
+
+.form__submit {
+  width: 234px;
+}
+
 @media screen and (min-width: 576px) {
   .course-tile__prices_phone {
     display: none;
@@ -3213,6 +3279,38 @@ h6 {
     font-size: 16px;
     line-height: 24px;
   }
+
+  .form__fields {
+    grid-gap: 10px;
+  }
+
+  .form__field {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .form__field_textarea {
+    height: 100%;
+    padding-top: 12px;
+  }
+
+  .form__bottom {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .form__agreement {
+    order: 1;
+    margin-top: 10px;
+    font-size: 10px;
+    line-height: 17px;
+  }
+
+  .form__submit {
+    order: 0;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -3795,6 +3893,11 @@ h6 {
     font-size: 14px;
     line-height: 20px;
   }
+
+  .form__fields {
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+  }
 }
 
 @media screen and (max-width: 575.98px) {
@@ -3882,5 +3985,22 @@ h6 {
   .knowledge__image {
     flex-shrink: 0;
     margin-right: 15px;
+  }
+
+  .form__field {
+    font-weight: 400;
+  }
+
+  .form__field_textarea {
+    order: 3;
+    height: 90px;
+  }
+
+  .form__bottom {
+    margin-top: 15px;
+  }
+
+  .form__agreement {
+    margin-top: 15px;
   }
 }
