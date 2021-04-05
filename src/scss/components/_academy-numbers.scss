@@ -41,6 +41,8 @@
     font-size: 100px;
     line-height: 120px;
     color: #D6E1F0;
+    opacity: 0;
+    transition: opacity ease-in-out 350ms;
 
     @include laptop {
       font-size: 70px;
@@ -55,6 +57,9 @@
     font-size: 18px;
     line-height: 26px;
     color: $dark-gray;
+    opacity: 0;
+    transition: opacity ease-in-out 350ms;
+    transition-delay: 350ms;
 
     @include laptop {
       font-size: 14px;
@@ -71,6 +76,9 @@
     font-size: 36px;
     line-height: 48px;
     margin-bottom: 17px;
+    opacity: 0;
+    transition: opacity ease-in-out 350ms;
+    transition-delay: 350ms;
 
     @include laptop {
       font-size: 26px;
@@ -128,6 +136,18 @@
             line-height: 27px;
           }
 
+        }
+
+      }
+
+    }
+
+    &_active {
+
+      .academy-numbers {
+
+        &__number, &__subtitle, &__text {
+          opacity: 1;
         }
 
       }

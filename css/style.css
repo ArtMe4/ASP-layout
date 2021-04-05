@@ -2084,6 +2084,8 @@ h6 {
   font-size: 100px;
   line-height: 120px;
   color: #D6E1F0;
+  opacity: 0;
+  transition: opacity ease-in-out 350ms;
 }
 
 .academy-numbers__text {
@@ -2091,6 +2093,9 @@ h6 {
   font-size: 18px;
   line-height: 26px;
   color: #3d4c68;
+  opacity: 0;
+  transition: opacity ease-in-out 350ms;
+  transition-delay: 350ms;
 }
 
 .academy-numbers__subtitle {
@@ -2100,6 +2105,9 @@ h6 {
   font-size: 36px;
   line-height: 48px;
   margin-bottom: 17px;
+  opacity: 0;
+  transition: opacity ease-in-out 350ms;
+  transition-delay: 350ms;
 }
 
 .academy-numbers__item {
@@ -2121,6 +2129,12 @@ h6 {
 .academy-numbers__item_big .academy-numbers__text {
   font-size: 22px;
   line-height: 35px;
+}
+
+.academy-numbers__item_active .academy-numbers__number,
+.academy-numbers__item_active .academy-numbers__subtitle,
+.academy-numbers__item_active .academy-numbers__text {
+  opacity: 1;
 }
 
 .academy-numbers__photo {
