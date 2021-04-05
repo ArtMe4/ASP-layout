@@ -1,0 +1,154 @@
+.academy-numbers {
+
+  @include tablet {
+    display: none;
+  }
+
+  &__left {
+
+    padding-top: 30px;
+
+    @include desktop {
+      padding-top: 0;
+    }
+
+  }
+
+  &__grid {
+
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 120px;
+    grid-column-gap: 30px;
+
+    @include laptop {
+      margin-top: 30px;
+      grid-auto-rows: 90px;
+      grid-column-gap: 20px;
+    }
+
+  }
+
+  &__number {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    font-family: "Literata";
+    font-weight: 500;
+    font-size: 100px;
+    line-height: 120px;
+    color: #D6E1F0;
+
+    @include laptop {
+      font-size: 70px;
+      line-height: 80px;
+    }
+
+  }
+
+  &__text {
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: $dark-gray;
+
+    @include laptop {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+  }
+
+  &__subtitle {
+
+    font-family: "Literata";
+    color: $dark-blue;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    margin-bottom: 17px;
+
+    @include laptop {
+      font-size: 26px;
+      line-height: 28px;
+      margin-bottom: 10px;
+    }
+
+  }
+
+  &__item {
+
+    position: relative;
+    padding-top: 60px;
+    padding-left: 68px;
+
+    @include laptop {
+      padding-left: 40px;
+      padding-top: 40px;
+    }
+
+    &_big {
+
+      grid-row: span 3;
+      padding-top: 180px;
+
+      @include desktop {
+        padding-top: 120px;
+      }
+
+      @include laptop {
+        padding-top: 105px;
+      }
+
+      .academy-numbers {
+
+        &__number {
+
+          font-size: 260px;
+          line-height: 260px;
+
+          @include laptop {
+            font-size: 230px;
+            line-height: 240px;
+          }
+
+        }
+
+        &__text {
+
+          font-size: 22px;
+          line-height: 35px;
+
+          @include laptop {
+            font-size: 17px;
+            line-height: 27px;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  &__photo {
+
+    max-width: 100%;
+
+    @include desktop {
+      max-width: none;
+      position: absolute;
+    }
+
+    @include laptop {
+      max-height: 323px;
+    }
+
+  }
+
+}
