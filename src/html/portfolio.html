@@ -1,0 +1,124 @@
+@@include('common/header.html')
+
+<div class="sandbox">
+
+    <div class="portfolio container">
+
+       <ul class="portfolio__tabs nav" role="tablist">
+           <li class="nav-item" role="presentation">
+               <a class="portfolio__tab nav-link active" data-bs-toggle="tab" href="#portfolio-mine" role="tab">
+                   <img class="portfolio__tab-bg" src="images/portfolio/mine.jpg" alt="">
+                   <span class="portfolio__tab-title">Мои работы</span>
+                   <span class="portfolio__tab-description">Предлагаю убедиться в моем профессионализме</span>
+               </a>
+           </li>
+           <li class="nav-item" role="presentation">
+               <a class="portfolio__tab nav-link" data-bs-toggle="tab" href="#portfolio-students" role="tab">
+                   <img class="portfolio__tab-bg" src="images/portfolio/students.jpg" alt="">
+                   <span class="portfolio__tab-title">Работы моих учениц</span>
+                   <span class="portfolio__tab-description">Примеры работ слушателей академии</span>
+               </a>
+           </li>
+       </ul>
+
+        <div class="portfolio__content tab-content">
+            <div class="portfolio__mine tab-pane fade show active" id="portfolio-mine" role="tabpanel">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="portfolio__title title title_small">Мои работы</div>
+                        <div class="portfolio__caption">
+                            Я практикующий мастер по пошиву свадебных платьев.<br>
+                            Доказательство моего мастерства - это мои работы.
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="portfolio__grid portfolio__grid_no-mt portfolio__grid_two">
+                            @@for (var i = 0; i < 2; i++) {
+                                <div class="portfolio__grid-photo">
+                                    <img src="images/portfolio/photo-vertical.jpg" alt="">
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio__grid portfolio__grid_three">
+                    @@for (var i = 0; i < 3; i++) {
+                        <div class="portfolio__grid-photo">
+                            <img src="images/portfolio/photo-horisontal.jpg" alt="">
+                        </div>
+                    }
+                </div>
+                <div class="portfolio__grid portfolio__grid_four">
+                    @@for (var i = 0; i < 4; i++) {
+                        <div class="portfolio__grid-photo">
+                            <img src="images/portfolio/photo-vertical.jpg" alt="">
+                        </div>
+                    }
+                </div>
+                <a href="#" class="portfolio__more portfolio__more_dark button button_invert">Показать больше</a>
+            </div>
+            <div class="tab-pane fade" id="portfolio-students" role="tabpanel">
+                <div class="portfolio__title portfolio__title_no-pb title title_small">Работы моих учениц</div>
+                <div class="portfolio__caption portfolio__caption_bold">
+                    Я практикующий мастер по пошиву свадебных платьев.<br>
+                    Доказательство моего мастерства - это мои работы.
+                </div>
+                <div class="portfolio__students">
+                    @@for (var i = 0; i < 3; i++) {
+                        <div class="portfolio__student">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="review review_min">
+                                        <div class="review__top">
+                                            <div class="review__photo">
+                                                <img src="images/review/photo.png" alt="">
+                                            </div>
+                                            <div class="review__info">
+                                                <div class="review__name-and-age">
+                                                    <div class="review__name">Юлия блаблабла</div>
+                                                    <div class="review__age">35 лет, Москва</div>
+                                                </div>
+                                                <div class="review__position">Мастер высшей категории</div>
+                                            </div>
+                                        </div>
+                                        <div class="review__text">
+                                            О Юленьке я узнала на форуме Академии корсета,сначала просто часами рассматривала её работы.
+                                            Все кто видел со мной согласятся,что это просто восторг!!!!! Поэтому когда вышел первый Юлин
+                                            диск я без раздумий его заказала,знания и опыт которыми делится Юля просто бесценны!
+                                            Уроки изложены грамотно,доступно и понятно!! С тех пор я приобретаю все Юлины диски
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="portfolio__slider swiper-container">
+                                        <div class="swiper-wrapper">
+                                            @@for (var i = 0; i < 3; i++) {
+                                            <div class="portfolio__slide swiper-slide">
+                                                <img src="images/portfolio/photo-student-1.jpg" alt="">
+                                            </div>
+                                            <div class="portfolio__slide swiper-slide">
+                                                <img src="images/portfolio/photo-student-2.jpg" alt="">
+                                            </div>
+                                            }
+                                        </div>
+                                        <div class="swiper-controls">
+                                            <div class="swiper-buttons swiper-buttons_blue">
+                                                <div class="swiper-button-prev"></div>
+                                                <div class="swiper-button-next"></div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <a href="#" class="portfolio__more button button_invert">Показать больше</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@@include('common/footer.html')

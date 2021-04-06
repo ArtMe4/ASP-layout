@@ -1,0 +1,433 @@
+.portfolio {
+
+  &__tabs {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+
+    @include laptop {
+      grid-gap: 20px;
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+  &__tab {
+
+    $tab: &;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 360px;
+    border-radius: 3px;
+    overflow: hidden;
+    text-align: center;
+    padding: 200px 30px 0;
+    filter: drop-shadow(0px 2px 14px rgba(7, 10, 36, 0.15));
+
+    @include desktop {
+      height: 290px;
+      padding-top: 150px;
+    }
+
+    @include laptop {
+      height: 212px;
+      padding-top: 100px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: #FFFFFF;
+      opacity: 0.8;
+      z-index: -1;
+      transition: all 300ms ease-in-out;
+    }
+
+    &-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      z-index: -2;
+    }
+
+    &-title {
+
+      font-family: "Montserrat";
+      font-weight: 600;
+      font-size: 34px;
+      line-height: 48px;
+      color: $dark-blue;
+
+      @include desktop {
+        font-size: 28px;
+        line-height: 40px;
+      }
+
+      @include laptop {
+        font-size: 22px;
+        line-height: 32px;
+      }
+
+    }
+
+    &-description {
+
+      margin-top: 10px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+      color: $dark-gray;
+
+      @include desktop {
+        font-size: 18px;
+        line-height: 28px;
+      }
+
+      @include laptop {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+    }
+
+    &.active, &:hover {
+
+      &::before {
+        background: $dark-blue;
+        opacity: 0.4;
+      }
+
+      #{$tab}-title, #{$tab}-description {
+        color: $white;
+      }
+
+    }
+
+  }
+
+  &__content {
+
+    margin-top: 80px;
+
+    @include tablet {
+      margin-top: 50px;
+    }
+
+  }
+
+  &__mine {
+
+    position: relative;
+    padding-bottom: 80px;
+
+    @include laptop {
+      padding-bottom: 50px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -2;
+      top: 0;
+      bottom: 0;
+      left: -50vw;
+      right: -50vw;
+      background: #D6E1F0;
+    }
+
+  }
+
+  &__title {
+
+    position: relative;
+    padding-bottom: 40px;
+
+    @include desktop {
+      padding-bottom: 20px;
+    }
+
+    @include laptop {
+      padding-bottom: 10px;
+    }
+
+    @include tablet {
+      padding-bottom: 5px;
+    }
+
+    &_no-pb {
+      padding-bottom: 0 !important;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: -50vw;
+      right: -70vw;
+      background: $white;
+    }
+
+  }
+
+  &__caption {
+
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 30px;
+    color: $dark-gray;
+
+    @include laptop {
+      margin-top: 15px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &_bold {
+      font-weight: 500;
+    }
+
+  }
+
+  &__grid {
+
+    margin-top: 20px;
+    display: grid;
+    grid-gap: 20px;
+
+    @include laptop {
+      margin-top: 10px;
+      grid-gap: 10px;
+    }
+
+    @include tablet {
+      margin-top: 15px;
+      grid-gap: 15px;
+    }
+
+    &_two, &_four {
+
+      grid-auto-rows: 405px;
+
+      @include desktop {
+        grid-auto-rows: 322px;
+      }
+
+      @include laptop {
+        grid-auto-rows: 239px;
+      }
+
+    }
+
+    &_two {
+
+      grid-template-columns: repeat(2, 1fr);
+
+      @include tablet {
+
+        grid-template-columns: 1fr;
+
+        .portfolio__grid-photo:not(:first-child) {
+          display: none;
+        }
+
+      }
+
+    }
+
+    &_three {
+
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 245px;
+
+      @include desktop {
+        grid-auto-rows: 195px;
+      }
+
+      @include laptop {
+        grid-auto-rows: 145px;
+      }
+
+      @include tablet {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 218px;
+      }
+
+    }
+
+    &_four {
+
+      grid-template-columns: repeat(4, 1fr);
+
+      @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    &_no-mt {
+      margin-top: 0 !important;
+    }
+
+    &-photo {
+
+      background: $white;
+      padding: 20px;
+      overflow: hidden;
+
+      @include desktop {
+        padding: 15px;
+      }
+
+      @include laptop {
+        padding: 10px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+    }
+
+  }
+
+  &__more {
+
+    margin-top: 40px;
+    width: 100%;
+
+    @include desktop {
+      margin-top: 35px;
+    }
+
+    @include laptop {
+      margin-top: 30px;
+    }
+
+    &_dark {
+      color: $blue;
+      border-color: $blue;
+    }
+
+  }
+
+  &__students {
+
+    margin-top: 40px;
+
+    @include tablet {
+      margin-top: 25px;
+    }
+
+  }
+
+  &__student {
+
+    &:not(:last-child) {
+
+      position: relative;
+      margin-bottom: 100px;
+      padding-bottom: 80px;
+
+      @include desktop {
+        margin-bottom: 75px;
+        padding-bottom: 65px;
+      }
+
+      @include laptop {
+        padding-bottom: 30px;
+        margin-bottom: 50px;
+      }
+
+      @include tablet {
+        margin-bottom: 30px;
+      }
+
+      &::after {
+
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: url("../images/portfolio/decor.svg") left no-repeat;
+
+        @include desktop {
+          background-position: center;
+        }
+
+      }
+
+    }
+
+  }
+
+  &__slider {
+
+    clip-path: inset(0 -50vw 0 0);
+    overflow: visible;
+
+    @include tablet {
+      margin-top: 20px;
+      clip-path: none;
+    }
+
+    .swiper-wrapper {
+
+      height: 308px;
+
+      @include desktop {
+        height: 250px;
+      }
+
+      @include laptop {
+        height: 180px;
+      }
+
+    }
+
+    .swiper-controls {
+
+      @include laptop {
+        justify-content: start;
+      }
+
+      @include tablet {
+        justify-content: center;
+      }
+
+    }
+
+  }
+
+  &__slide {
+
+    width: auto;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+
+  }
+
+}

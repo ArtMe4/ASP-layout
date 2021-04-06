@@ -275,4 +275,69 @@
 
   }
 
+
+  //for portfolio
+
+  &_min {
+
+    &::after {
+      display: none;
+    }
+
+    .review {
+
+      &__top {
+
+        @include desktop {
+          align-items: center;
+        }
+
+      }
+
+      &__photo {
+
+        @include desktop {
+          width: 100px;
+          height: 100px;
+        }
+
+        @include laptop {
+          width: 60px;
+          height: 60px;
+          margin-right: 15px;
+        }
+
+      }
+
+      &__age {
+
+        @include laptop {
+          display: none;
+        }
+
+      }
+
+      &__position {
+
+        @include laptop {
+          margin-top: 0;
+          font-size: 12px;
+          line-height: 18px;
+          color: $dark-gray;
+        }
+
+      }
+
+      &__text {
+
+        @include laptop {
+          margin-top: 15px;
+        }
+
+      }
+
+    }
+
+  }
+
 }

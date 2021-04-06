@@ -142,6 +142,14 @@ h6 {
 
     }
 
+    &_blue {
+
+      .swiper-button-prev, .swiper-button-next {
+        background: url("../images/common/swiper-arrow-blue.svg") center no-repeat;
+      }
+
+    }
+
     .swiper-button-prev {
       margin-right: 10px;
     }
