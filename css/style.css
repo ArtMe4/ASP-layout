@@ -229,6 +229,35 @@ h6 {
   z-index: -1;
 }
 
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.embed-responsive::before {
+  display: block;
+  content: "";
+}
+
+.embed-responsive-21by9::before {
+  padding-top: 42.85714%;
+}
+
+.embed-responsive-16by9::before {
+  padding-top: 56.25%;
+}
+
+.embed-responsive-4by3::before {
+  padding-top: 75%;
+}
+
+.embed-responsive-1by1::before {
+  padding-top: 100%;
+}
+
 .sandbox {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -2331,6 +2360,86 @@ h6 {
   color: #ffffff;
 }
 
+.acquaintance__video {
+  position: relative;
+}
+
+.acquaintance__video::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 100%;
+  height: 100%;
+  background: url("../images/acquaintance/decor.svg") top right no-repeat;
+  background-size: contain;
+}
+
+.acquaintance__slider {
+  margin-top: 40px;
+}
+
+.yt-lazy {
+  position: relative;
+  background-color: #000;
+}
+
+.yt-lazy:hover .yt-lazy__play-bg {
+  fill: #f00;
+  fill-opacity: 1;
+}
+
+.yt-lazy__preview {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  transition: opacity .8s ease-in;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.yt-lazy__preview.darker {
+  opacity: 0;
+}
+
+.yt-lazy__preview.darker .yt-lazy__play {
+  display: none;
+}
+
+.yt-lazy__preview-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.yt-lazy__play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: fill 0.1s cubic-bezier(0.4, 0, 1, 1), fill-opacity 0.1s cubic-bezier(0.4, 0, 1, 1);
+  z-index: 2;
+}
+
+.yt-lazy__play-bg {
+  fill: #000;
+  fill-opacity: .8;
+}
+
+.yt-lazy iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
 @media screen and (min-width: 576px) {
   .course-tile__prices_phone {
     display: none;
@@ -3392,6 +3501,15 @@ h6 {
     font-size: 16px;
     line-height: 24px;
   }
+
+  .acquaintance__video::before {
+    top: -30px;
+    right: -30px;
+  }
+
+  .acquaintance__slider {
+    margin-top: 30px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -3998,6 +4116,19 @@ h6 {
 
   .have-questions__form {
     margin-top: 30px;
+  }
+
+  .acquaintance__video {
+    margin-top: 47px;
+  }
+
+  .acquaintance__video::before {
+    top: -20px;
+    right: -12px;
+  }
+
+  .acquaintance__slider {
+    margin-top: 20px;
   }
 }
 

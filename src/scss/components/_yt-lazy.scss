@@ -1,0 +1,74 @@
+.yt-lazy {
+
+    $this: &;
+
+    position: relative;
+    background-color: #000;
+
+    &:hover {
+
+        #{$this}__play-bg {
+            fill: #f00;
+            fill-opacity: 1;
+        }
+
+    }
+
+    &__preview {
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        transition: opacity .8s ease-in;
+        cursor: pointer;
+        z-index: 1;
+
+        &.darker  {
+
+            opacity: 0;
+
+            #{$this}__play {
+                display: none;
+            }
+
+        }
+
+        &-img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+    }
+
+    &__play {
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: fill .1s cubic-bezier(0.4,0,1,1),fill-opacity .1s cubic-bezier(0.4,0,1,1);
+        z-index: 2;
+
+        &-bg {
+            fill: #000;
+            fill-opacity: .8;
+        }
+
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        border: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+    }
+
+}

@@ -1,0 +1,35 @@
+@@include('common/header.html')
+
+<div class="sandbox">
+
+    <div class="acquaintance container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-3">
+                <div class="title title_small">Знакомство с академией</div>
+            </div>
+            <div class="col-xl-9 col-lg-8 col-md-9">
+                <div class="acquaintance__video">
+                    <div class="yt-lazy embed-responsive embed-responsive-16by9" data-youtube-id="bZl8hSNWrVY"></div>
+                </div>
+            </div>
+        </div>
+        <div class="acquaintance__slider examples">
+            <div class="examples__slider swiper-container">
+                <div class="swiper-wrapper">
+                    @@for (var i = 0; i < 3; i++) {
+                        <div class="examples__slide swiper-slide">
+                            <img src="images/examples/photo-1.jpg" alt="">
+                        </div>
+                        <div class="examples__slide swiper-slide">
+                            <img src="images/examples/photo-2.jpg" alt="">
+                        </div>
+                    }
+                </div>
+                <div class="swiper-pagination"></div>
+           </div>
+        </div>
+    </div>
+
+</div>
+
+@@include('common/footer.html')

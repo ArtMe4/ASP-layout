@@ -1,0 +1,50 @@
+.acquaintance {
+
+  &__video {
+
+    position: relative;
+
+    @include tablet {
+      margin-top: 47px;
+    }
+
+    &::before {
+
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 100%;
+      height: 100%;
+      background: url("../images/acquaintance/decor.svg") top right no-repeat;
+      background-size: contain;
+
+      @include laptop {
+        top: -30px;
+        right: -30px;
+      }
+
+      @include tablet {
+        top: -20px;
+        right: -12px;
+      }
+
+    }
+
+  }
+
+  &__slider {
+
+    margin-top: 40px;
+
+    @include laptop {
+      margin-top: 30px;
+    }
+
+    @include tablet {
+      margin-top: 20px;
+    }
+
+  }
+
+}
