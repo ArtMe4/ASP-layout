@@ -334,3 +334,15 @@ h6 {
     padding-top: percentage(1 / 1);
   }
 }
+
+.fancybox-bg {
+  background: #051127;
+}
+
+.fancybox-is-open .fancybox-bg {
+  opacity: .6;
+}
+
+.fancybox-close-small {
+  color: rgba(255, 255, 255, 0.6) !important;
+}

@@ -59,7 +59,7 @@
         padding-top: 12px;
       }
 
-      @include phone {
+      @include tablet {
         order: 3;
         height: 90px;
       }
@@ -81,7 +81,7 @@
       align-items: start;
     }
 
-    @include phone {
+    @include tablet {
       margin-top: 15px;
     }
 

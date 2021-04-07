@@ -1,0 +1,32 @@
+@@include('common/header.html')
+
+<div id="ask-modal" class="modal">
+    <div class="modal__inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="modal__title title">Задать вопрос</div>
+                    <div class="modal__form form">
+                        <div class="form__fields">
+                            <input type="text" class="form__field" placeholder="Имя">
+                            <textarea class="form__field form__field_textarea" placeholder="Вопрос"></textarea>
+                            <input type="text" class="form__field" placeholder="Номер телефона">
+                        </div>
+                        <div class="form__bottom">
+                            <div class="form__agreement">
+                                Отправляя форму, вы принимаете
+                                <a href="#" target="_blank">Условия Пользовательского соглашения «Digital Finance»</a>
+                            </div>
+                            <a href="#" class="form__submit button">Отправить</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal__photo">
+            <img src="images/modal/photo.png" alt="">
+        </div>
+    </div>
+</div>
+
+@@include('common/footer.html')

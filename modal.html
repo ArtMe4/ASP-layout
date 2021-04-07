@@ -23,30 +23,33 @@
 
 <body>
 
-    <div class="sandbox">
-
-        <div class="thought-out container">
-            <div class="title title_small">Продумано абсолютно все</div>
-            <div class="thought-out__grid">
-                <div class="thought-out__item">
-                    Один из важных пунктов был «Комфорт» невесты в течении всего свадебного дня, а это 15 часов.
-                </div>
-                <div class="thought-out__item">
-                    Я думала о том, как невеста будет двигаться в платье, сидеть в лимузине и за столом.
-                </div>
-                <div class="thought-out__item thought-out__item_big">
-                    Последовательность и технология пошива, для скорости. Т.к. на подготовку к свадьбе,
-                    пошиву платья для невесты и мамы невесты было определено всего 2 месяца.
-                </div>
-                <div class="thought-out__item">
-                    Весь свадебный день, начиная с утра невесты, до окончания свадебного дня.
-                </div>
-                <div class="thought-out__item">
-                    Меня в первую очередь волновало, как невеста будет одевать платье.
+    <div id="ask-modal" class="modal">
+        <div class="modal__inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="modal__title title">Задать вопрос</div>
+                        <div class="modal__form form">
+                            <div class="form__fields">
+                                <input type="text" class="form__field" placeholder="Имя">
+                                <textarea class="form__field form__field_textarea" placeholder="Вопрос"></textarea>
+                                <input type="text" class="form__field" placeholder="Номер телефона">
+                            </div>
+                            <div class="form__bottom">
+                                <div class="form__agreement">
+                                    Отправляя форму, вы принимаете
+                                    <a href="#" target="_blank">Условия Пользовательского соглашения «Digital Finance»</a>
+                                </div>
+                                <a href="#" class="form__submit button">Отправить</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="modal__photo">
+                <img src="images/modal/photo.png" alt="">
+            </div>
         </div>
-
     </div>
 
     <script src="js/libs/jquery-3.5.1.min.js"></script>

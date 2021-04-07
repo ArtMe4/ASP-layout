@@ -263,6 +263,18 @@ h6 {
   padding-top: 100%;
 }
 
+.fancybox-bg {
+  background: #051127;
+}
+
+.fancybox-is-open .fancybox-bg {
+  opacity: .6;
+}
+
+.fancybox-close-small {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
 .sandbox {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -2953,6 +2965,42 @@ h6 {
   margin-left: 10px;
 }
 
+.modal {
+  display: none;
+  width: 1146px;
+  background: #3d4c68;
+  padding: 0;
+}
+
+.modal__inner {
+  position: relative;
+  padding: 20px 60px 60px;
+}
+
+.modal__title {
+  color: #ffffff;
+}
+
+.modal__form {
+  margin-top: 40px;
+}
+
+.modal__photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 460px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.modal__photo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 @media screen and (min-width: 576px) {
   .course-tile__prices_phone {
     display: none;
@@ -3221,6 +3269,18 @@ h6 {
 
   .full-course__grid {
     margin-top: 50px;
+  }
+
+  .modal {
+    width: 960px;
+  }
+
+  .modal__inner {
+    padding-bottom: 30px;
+  }
+
+  .modal__photo {
+    width: 400px;
   }
 }
 
@@ -4354,6 +4414,18 @@ h6 {
   .footer__developer img {
     width: 110px;
   }
+
+  .modal {
+    width: 720px;
+  }
+
+  .modal__inner {
+    padding: 40px 26px 80px;
+  }
+
+  .modal__photo {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -4942,6 +5014,15 @@ h6 {
     grid-gap: 15px;
   }
 
+  .form__field_textarea {
+    order: 3;
+    height: 90px;
+  }
+
+  .form__bottom {
+    margin-top: 15px;
+  }
+
   .have-questions {
     padding: 40px 0 50px;
   }
@@ -5123,6 +5204,14 @@ h6 {
     line-height: 16px;
     justify-content: center;
   }
+
+  .modal {
+    width: 540px;
+  }
+
+  .modal__inner {
+    padding: 40px 18px 60px;
+  }
 }
 
 @media screen and (max-width: 575.98px) {
@@ -5214,15 +5303,6 @@ h6 {
 
   .form__field {
     font-weight: 400;
-  }
-
-  .form__field_textarea {
-    order: 3;
-    height: 90px;
-  }
-
-  .form__bottom {
-    margin-top: 15px;
   }
 
   .form__agreement {
