@@ -1,0 +1,52 @@
+.thought-out {
+
+  @include tablet {
+    display: none;
+  }
+
+  &__grid {
+
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px 35px;
+
+    @include laptop {
+      margin-top: 20px;
+      grid-gap: 30px 20px;
+    }
+
+  }
+
+  &__item {
+
+    position: relative;
+    font-size: 18px;
+    line-height: 26px;
+    color: $dark-gray;
+    padding-left: 34px;
+
+    @include laptop {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &_big {
+      grid-row: span 2;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      background: $blue;
+    }
+
+  }
+
+
+}

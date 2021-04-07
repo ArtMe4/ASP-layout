@@ -2773,6 +2773,36 @@ h6 {
   color: #3d4c68;
 }
 
+.thought-out__grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px 35px;
+}
+
+.thought-out__item {
+  position: relative;
+  font-size: 18px;
+  line-height: 26px;
+  color: #3d4c68;
+  padding-left: 34px;
+}
+
+.thought-out__item_big {
+  grid-row: span 2;
+}
+
+.thought-out__item::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #085f97;
+}
+
 @media screen and (min-width: 576px) {
   .course-tile__prices_phone {
     display: none;
@@ -4095,6 +4125,16 @@ h6 {
     font-size: 14px;
     line-height: 20px;
   }
+
+  .thought-out__grid {
+    margin-top: 20px;
+    grid-gap: 30px 20px;
+  }
+
+  .thought-out__item {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -4817,6 +4857,10 @@ h6 {
   }
 
   .full-course__grid {
+    display: none;
+  }
+
+  .thought-out {
     display: none;
   }
 }
