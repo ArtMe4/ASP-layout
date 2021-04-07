@@ -2687,6 +2687,92 @@ h6 {
   color: #3d4c68;
 }
 
+.full-course__content {
+  margin-top: 40px;
+}
+
+.full-course__photo {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.full-course__info {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.full-course__prices {
+  display: flex;
+  align-items: flex-end;
+}
+
+.full-course__price {
+  font-size: 40px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #0a2555;
+}
+
+.full-course__price_old {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: line-through;
+  margin-right: 10px;
+  color: #085f97;
+  transform: translateY(6px);
+}
+
+.full-course__conditions {
+  margin-top: 5px;
+  font-size: 18px;
+  line-height: 33px;
+  color: #949BA4;
+}
+
+.full-course__buy {
+  margin-top: 15px;
+}
+
+.full-course__list-item {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 26px;
+  color: #3d4c68;
+}
+
+.full-course__list-item::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  margin-right: 30px;
+  flex-shrink: 0;
+  background: url("../images/full-course/diamond.svg") center no-repeat;
+  background-size: contain;
+}
+
+.full-course__list-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.full-course__grid {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.full-course__caption {
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #3d4c68;
+}
+
 @media screen and (min-width: 576px) {
   .course-tile__prices_phone {
     display: none;
@@ -2738,6 +2824,10 @@ h6 {
 
   .benefit__tile_horizontal {
     grid-column: span 2;
+  }
+
+  .full-course__grid_laptop {
+    display: none;
   }
 }
 
@@ -2935,6 +3025,11 @@ h6 {
 
   .needlewomen__grid {
     grid-gap: 40px;
+  }
+
+  .full-course__photo {
+    margin-left: -40px;
+    max-width: calc(100% + 40px);
   }
 }
 
@@ -3929,6 +4024,71 @@ h6 {
     font-size: 14px;
     line-height: 20px;
   }
+
+  .full-course__photo {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .full-course__info {
+    margin-top: 16px;
+  }
+
+  .full-course__price {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+
+  .full-course__price_old {
+    font-size: 15px;
+    line-height: 26px;
+    transform: translateY(-2px);
+  }
+
+  .full-course__conditions {
+    margin-top: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .full-course__buy {
+    margin-top: 10px;
+  }
+
+  .full-course__list-item {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .full-course__list-item::before {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+  }
+
+  .full-course__list-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .full-course__grid {
+    margin-top: 40px;
+  }
+
+  .full-course__grid_desktop {
+    display: none;
+  }
+
+  .full-course__icon {
+    width: 30px;
+  }
+
+  .full-course__caption {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -4607,6 +4767,51 @@ h6 {
 
   .needlewomen__grid {
     margin-top: 20px;
+  }
+
+  .full-course__content {
+    margin-top: 20px;
+  }
+
+  .full-course__photo {
+    display: none;
+  }
+
+  .full-course__info {
+    margin-top: 30px;
+  }
+
+  .full-course__price {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+
+  .full-course__price_old {
+    font-size: 14px;
+    transform: translateY(1px);
+  }
+
+  .full-course__conditions {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 17px;
+    color: #3d4c68;
+    font-weight: 400;
+  }
+
+  .full-course__buy {
+    width: 100%;
+  }
+
+  .full-course__list-item::before {
+    width: 20px;
+    height: 20px;
+    background-size: 28px;
+  }
+
+  .full-course__grid {
+    display: none;
   }
 }
 
