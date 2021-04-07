@@ -3027,9 +3027,20 @@ h6 {
     grid-gap: 40px;
   }
 
-  .full-course__photo {
-    margin-left: -40px;
-    max-width: calc(100% + 40px);
+  .full-course__info {
+    margin-top: 40px;
+  }
+
+  .full-course__price {
+    font-size: 32px;
+  }
+
+  .full-course__price_old {
+    font-size: 17px;
+  }
+
+  .full-course__grid {
+    margin-top: 50px;
   }
 }
 
@@ -4023,11 +4034,6 @@ h6 {
     margin-top: 10px;
     font-size: 14px;
     line-height: 20px;
-  }
-
-  .full-course__photo {
-    margin-left: 0;
-    max-width: 100%;
   }
 
   .full-course__info {
