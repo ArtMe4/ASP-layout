@@ -2803,6 +2803,156 @@ h6 {
   background: #085f97;
 }
 
+.footer {
+  position: relative;
+  background: #051127;
+  color: #ffffff;
+  padding: 60px 0 26px;
+}
+
+.footer__logo-col {
+  width: 190px;
+}
+
+.footer__logo {
+  max-width: 100%;
+}
+
+.footer__title {
+  margin-top: 23px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.footer__subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.footer__socials {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__social {
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.footer__social:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer__social img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.footer__menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__menu-item_contact {
+  display: flex;
+  align-items: center;
+}
+
+.footer__menu-item_contact::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-right: 6px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer__menu-item_phone::before {
+  background-image: url("../images/footer/phone.svg");
+}
+
+.footer__menu-item_email::before {
+  background-image: url("../images/footer/email.svg");
+}
+
+.footer__menu-item_wa::before {
+  background-image: url("../images/footer/wa.svg");
+}
+
+.footer__menu-item_tg::before {
+  background-image: url("../images/footer/tg.svg");
+}
+
+.footer__menu-item:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+.footer__menu-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.footer__language {
+  margin-top: 35px;
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.footer__language-item {
+  margin-left: 10px;
+  color: #ffffff;
+}
+
+.footer__language-item_active,
+.footer__language-item:hover {
+  text-decoration: underline;
+}
+
+.footer__bottom {
+  margin-top: 35px;
+  padding-top: 22px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.footer__bottom::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(214, 225, 240, 0.2);
+  transform: translateY(-22px);
+}
+
+.footer__bottom a {
+  color: #ffffff;
+}
+
+.footer__developer {
+  display: flex;
+  align-items: center;
+}
+
+.footer__developer a {
+  display: flex;
+  margin-left: 10px;
+}
+
 @media screen and (min-width: 576px) {
   .course-tile__prices_phone {
     display: none;
@@ -4135,6 +4285,75 @@ h6 {
     font-size: 14px;
     line-height: 20px;
   }
+
+  .footer {
+    padding-top: 40px;
+  }
+
+  .footer__logo-col {
+    width: 180px;
+  }
+
+  .footer__logo {
+    width: 145px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer__title {
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  .footer__subtitle {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .footer__socials {
+    margin-top: 0;
+    justify-content: start;
+  }
+
+  .footer__menu {
+    column-count: 2;
+  }
+
+  .footer__menu-item_contact::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer__menu-item:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  .footer__menu-link {
+    font-size: 13px;
+  }
+
+  .footer__lang-and-social {
+    margin-top: 23px;
+  }
+
+  .footer__language {
+    margin-top: 0;
+  }
+
+  .footer__bottom {
+    padding-top: 15px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .footer__bottom::before {
+    transform: translateY(-15px);
+  }
+
+  .footer__developer img {
+    width: 110px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -4862,6 +5081,47 @@ h6 {
 
   .thought-out {
     display: none;
+  }
+
+  .footer {
+    padding-top: 50px;
+    padding-bottom: 22px;
+  }
+
+  .footer__logo-col {
+    width: 100%;
+  }
+
+  .footer__title {
+    display: none;
+  }
+
+  .footer__subtitle {
+    display: none;
+  }
+
+  .footer__socials {
+    justify-content: center;
+  }
+
+  .footer__language {
+    display: none;
+  }
+
+  .footer__bottom {
+    margin-top: 27px;
+    font-size: 11px;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  .footer__developer {
+    margin-top: 20px;
+    text-align: right;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    justify-content: center;
   }
 }
 
