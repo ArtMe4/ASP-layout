@@ -2661,6 +2661,32 @@ h6 {
   width: auto;
 }
 
+.needlewomen__description {
+  margin-top: 36px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #3d4c68;
+}
+
+.needlewomen__photo {
+  margin-left: 30px;
+  max-width: calc(100% - 30px);
+}
+
+.needlewomen__grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 70px;
+}
+
+.needlewomen__caption {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3d4c68;
+}
+
 @media screen and (min-width: 576px) {
   .course-tile__prices_phone {
     display: none;
@@ -2905,6 +2931,10 @@ h6 {
 
   .portfolio__slider .swiper-wrapper {
     height: 250px;
+  }
+
+  .needlewomen__grid {
+    grid-gap: 40px;
   }
 }
 
@@ -3878,6 +3908,27 @@ h6 {
   .portfolio__slider .swiper-controls {
     justify-content: start;
   }
+
+  .needlewomen__description {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .needlewomen__grid {
+    margin-top: 40px;
+    grid-gap: 20px;
+  }
+
+  .needlewomen__icon {
+    width: 30px;
+  }
+
+  .needlewomen__caption {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -4549,6 +4600,14 @@ h6 {
   .portfolio__slider .swiper-controls {
     justify-content: center;
   }
+
+  .needlewomen__photo {
+    display: none;
+  }
+
+  .needlewomen__grid {
+    margin-top: 20px;
+  }
 }
 
 @media screen and (max-width: 575.98px) {
@@ -4653,5 +4712,24 @@ h6 {
 
   .form__agreement {
     margin-top: 15px;
+  }
+
+  .needlewomen__grid {
+    margin-top: 10px;
+    grid-template-columns: 1fr;
+  }
+
+  .needlewomen__benefit {
+    display: flex;
+    align-items: start;
+  }
+
+  .needlewomen__icon {
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+
+  .needlewomen__caption {
+    margin-top: 0;
   }
 }

@@ -1,0 +1,38 @@
+@@include('common/header.html')
+
+<div class="sandbox">
+
+    <div class="needlewomen container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="title">Курсы для рукодельниц</div>
+                <div class="needlewomen__description">
+                    В данном видеокурсе я периодически проводила видео экскурсии по мастерской и показывала,
+                    как на самом деле шла работа. Как были организованы рабочие зоны.<br>
+                    Как шла работа с большими объемами юбок и т.д. Это именно то, что в каждом моем видеокурсе
+                    остается за кадром. Но я знаю о том, что именно это многим очень интересно. Вовремя просмотра
+                    видеокурса, Вы увидите, как создаются не просто дорогие, а очень дорогие свадебные платья.
+                    В процессе пошива свадебного наряда для дочери у меня, опытного мастера, случился настоящий
+                    мозговой штурм. Прежде чем определить фасон платья и понять, что платье должно быть именно
+                    таким, я прокрутила в своей голове всю свою 23-х летнюю практику работы с невестами.
+                </div>
+                <div class="needlewomen__grid">
+                    @@for (var i = 0; i < 3; i++) {
+                        <div class="needlewomen__benefit">
+                            <img src="images/needlewomen/support.svg" class="needlewomen__icon" alt="">
+                            <div class="needlewomen__caption">
+                                Поддержка опытных специалистов, которые уже прошли курси могут помочь по любому вопросу
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img class="needlewomen__photo" src="images/needlewomen/photo.png" alt="">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@@include('common/footer.html')
