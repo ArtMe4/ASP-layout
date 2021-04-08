@@ -1,0 +1,172 @@
+.mobile-menu {
+
+  $this: &;
+
+  position: absolute;
+  top: 20px;
+  left: 42px;
+  right: 42px;
+  height: 610px;
+  max-height: calc(100vh - 40px);
+  background: $white;
+  border-radius: 3px;
+
+  @include tablet-min {
+    display: none;
+  }
+
+  &__close {
+    position: absolute;
+    top: -20px;
+    left: calc(50% - 20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #051127;
+    border-radius: 3px;
+  }
+
+  &__content {
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 30px;
+  }
+
+  &__level {
+
+    display: none;
+
+    &_active {
+      display: block;
+    }
+
+    &_one {
+      margin-top: 50px;
+    }
+
+    &_two {
+
+      #{$this}__link {
+        color: $dark-gray;
+      }
+
+    }
+
+    &_three {
+
+      #{$this}__link {
+        font-weight: 400;
+        color: $dark-gray;
+      }
+
+    }
+
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  &__link {
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $dark-blue;
+    text-align: center;
+
+    &:not(:first-child) {
+      margin-top: 25px;
+    }
+
+    &_events {
+      margin-top: 40px !important;
+      font-weight: 700;
+    }
+
+    &_courses {
+
+      display: flex;
+      align-items: center;
+
+      &::after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background: url("../images/mobile-menu/arrow-right.svg") center no-repeat;
+      }
+
+    }
+
+  }
+
+  &__languages {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__language {
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $dark-blue;
+
+    &_active {
+      font-weight: 700;
+    }
+
+    &:not(:last-child) {
+
+      margin-right: 5px;
+
+      &::after {
+        content: "|";
+        font-weight: 500;
+        margin-left: 5px;
+      }
+
+    }
+
+  }
+
+  &__back {
+
+    height: 90px;
+    background: #D6E1F0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    &-link {
+
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      height: 24px;
+      color: $dark-blue;
+
+      &::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background: url("../images/mobile-menu/back.svg") center no-repeat;
+        margin-right: 10px;
+      }
+
+    }
+
+  }
+
+}

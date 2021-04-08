@@ -87,4 +87,16 @@
     padding-bottom: 50vh;
   }
 
+  &_mobile-menu {
+    background: $dark-gray;
+    height: 100vh;
+  }
+
+  &__comment {
+    background: #D6E1F0;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 0 30px;
+  }
+
 }

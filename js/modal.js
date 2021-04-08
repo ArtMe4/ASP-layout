@@ -1,7 +1,11 @@
 $(document).ready(function () {
 
-    $.fancybox.open({
-        src  : '#ask-modal',
-    });
+    if ($('#ask-modal').length) {
+
+        $.fancybox.open({
+            src: '#ask-modal',
+        });
+
+    }
 
 });
